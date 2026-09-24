@@ -1,0 +1,1193 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Bansí · Análisis preparado por London Consulting Group</title>
+<meta name="description" content="Pieza de inteligencia estratégica preparada para Bansí, S.A., Institución de Banca Múltiple.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<!--
+  NOTA TIPOGRÁFICA: el design system de LCG especifica DIN 2014 para cifras y metadata.
+  Los archivos DIN 2014 disponibles son builds demo de Fontspring con cobertura de glifos
+  incompleta y no son aptos para producción. --font-numeric apunta a Manrope con
+  font-variant-numeric: tabular-nums. Swap pendiente a DIN 2014 licenciado.
+-->
+<style>
+:root{
+  --green-900:#073E38; --green-800:#085E54; --green-700:#0A7568; --green-600:#039271;
+  --green-500:#03B585; --green-400:#2FCB9E; --green-300:#7FE0C0; --green-200:#BAF4E9; --green-100:#DFF9F0;
+  --lime:#C9E265;
+  --n0:#FFFEFC; --n50:#F2EEEB; --n100:#E9E3DC; --n200:#DCD4C9; --n300:#C2B8AB;
+  --n400:#9A9086; --n500:#756C63; --n600:#574F49; --n700:#3D3733; --n800:#272320; --n900:#171512;
+  --warn:#C98A1F; --warn-bg:#FBEED9; --err:#C0503F; --err-bg:#F8E4DF; --info:#2E7FB8; --info-bg:#E1EEF7;
+  --font-sans:"Manrope","Helvetica Neue",Arial,sans-serif;
+  --font-numeric:"Manrope","Helvetica Neue",Arial,sans-serif;
+  --shadow-sm:0 1px 2px hsl(30 20% 20% / .06),0 1px 1px hsl(30 20% 20% / .04);
+  --shadow-md:0 4px 10px hsl(30 20% 20% / .08),0 1px 2px hsl(30 20% 20% / .06);
+  --shadow-lg:0 16px 32px hsl(30 20% 20% / .12),0 2px 6px hsl(30 20% 20% / .08);
+  --pad-top:env(safe-area-inset-top,0px);
+  --pad-bot:env(safe-area-inset-bottom,0px);
+  box-sizing:border-box;
+}
+*,*::before,*::after{box-sizing:inherit}
+html{-webkit-text-size-adjust:100%;scroll-padding-top:calc(64px + env(safe-area-inset-top,0px))}
+body{
+  margin:0;background:var(--n50);color:var(--n800);
+  font-family:var(--font-sans);font-size:17px;line-height:1.5;
+  font-weight:400;-webkit-font-smoothing:antialiased;
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+img{max-width:100%}
+h1,h2,h3,h4{margin:0;font-weight:700;letter-spacing:-.02em;line-height:1.08}
+p{margin:0 0 1em}
+p:last-child{margin-bottom:0}
+a{color:var(--green-700)}
+.num{font-family:var(--font-numeric);font-variant-numeric:tabular-nums}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap}
+
+/* ---------- HUB ---------- */
+#hub{
+  background:var(--green-900);color:var(--n50);min-height:100vh;
+  padding-top:calc(28px + env(safe-area-inset-top,0px));padding-bottom:64px;
+  position:relative;overflow:hidden;
+}
+#hub::before{
+  content:"";position:absolute;inset:-20% -10% auto -10%;height:70%;
+  background:
+    radial-gradient(48% 55% at 18% 22%, rgba(3,181,133,.42) 0%, transparent 62%),
+    radial-gradient(42% 48% at 74% 8%, rgba(186,244,233,.24) 0%, transparent 60%),
+    radial-gradient(34% 42% at 92% 46%, rgba(201,226,101,.20) 0%, transparent 62%);
+  filter:blur(18px);pointer-events:none;
+}
+#hub .wrap{position:relative;z-index:1}
+.brandbar{display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;margin-bottom:56px}
+.brandmark{display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+.lcg-logo{width:268px;height:auto;display:block}
+@media(max-width:600px){.lcg-logo{width:212px}}
+.claim{font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--green-300);font-weight:600}
+.meta-right{text-align:right;font-size:13px;color:var(--green-300);letter-spacing:.04em;line-height:1.5}
+.meta-right strong{display:block;color:var(--n50);font-size:15px;letter-spacing:0;font-weight:600}
+.eyebrow-hub{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--lime);font-weight:700;margin-bottom:18px}
+#hub h1{font-size:clamp(34px,5.6vw,60px);max-width:17ch;margin-bottom:22px}
+#hub h1 em{font-style:normal;color:var(--green-300)}
+.lede{font-size:clamp(17px,2vw,21px);line-height:1.5;color:rgba(242,238,235,.84);max-width:62ch;font-weight:400}
+
+.kpistrip{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:48px 0 52px}
+.kpi{background:rgba(255,254,252,.06);border:1px solid rgba(242,238,235,.16);border-radius:14px;padding:20px 18px}
+.kpi .kfig{font-family:var(--font-numeric);font-variant-numeric:tabular-nums;font-weight:300;font-size:clamp(32px,4.4vw,44px);line-height:1;color:var(--n50);letter-spacing:-.03em}
+.kpi .kfig sup{font-size:.42em;font-weight:600;vertical-align:super;margin-left:2px;color:var(--green-300)}
+.kpi .lab{font-size:13.5px;line-height:1.35;color:rgba(242,238,235,.9);margin-top:12px;font-weight:500}
+.kpi .src{font-size:11px;line-height:1.4;color:var(--green-300);margin-top:8px;letter-spacing:.02em}
+
+.idx-head{display:flex;align-items:baseline;justify-content:space-between;gap:16px;margin-bottom:18px;flex-wrap:wrap}
+.idx-head h2{font-size:14px;letter-spacing:.14em;text-transform:uppercase;color:var(--green-300);font-weight:700}
+.idx-head span{font-size:13px;color:rgba(242,238,235,.55)}
+.grid-idx{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.tile{
+  display:block;text-align:left;text-decoration:none;color:inherit;cursor:pointer;
+  background:rgba(255,254,252,.055);border:1px solid rgba(242,238,235,.14);border-radius:14px;
+  padding:18px 16px 16px;transition:background .18s ease,border-color .18s ease,transform .18s ease;
+  font-family:inherit;font-size:inherit;width:100%;
+}
+.tile:hover,.tile:focus-visible{background:rgba(255,254,252,.11);border-color:rgba(186,244,233,.4);transform:translateY(-2px)}
+.tile .tn{font-family:var(--font-numeric);font-variant-numeric:tabular-nums;font-size:12px;font-weight:700;color:var(--lime);letter-spacing:.08em}
+.tile .tt{display:block;font-weight:700;font-size:16.5px;line-height:1.2;margin:9px 0 7px;color:var(--n50);letter-spacing:-.01em}
+.tile .td{display:block;font-size:12.5px;line-height:1.4;color:rgba(242,238,235,.62)}
+.tile.cta-tile{
+  grid-column:span 2;border:none;
+  background:linear-gradient(118deg,var(--green-700) 0%,var(--green-500) 48%,var(--green-300) 78%,var(--lime) 128%);
+  color:var(--green-900);
+}
+.tile.cta-tile .tn{color:var(--green-900);opacity:.62}
+.tile.cta-tile .tt{color:var(--green-900);font-size:19px}
+.tile.cta-tile .td{color:rgba(7,62,56,.78)}
+.tile.cta-tile:hover{filter:brightness(1.05);border:none}
+.hub-foot{margin-top:34px;font-size:12px;color:rgba(242,238,235,.45);line-height:1.55;max-width:74ch}
+
+/* ---------- SECTION SHELL ---------- */
+.view{display:none}
+.view.active{display:block}
+@media (prefers-reduced-motion:no-preference){
+  .view.active{animation:fade .24s ease both}
+  @keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+}
+.topbar{
+  position:sticky;top:0;z-index:30;background:rgba(242,238,235,.94);
+  backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--n200);
+  padding-top:env(safe-area-inset-top,0px);
+}
+.topbar-in{max-width:1080px;margin:0 auto;padding:11px 24px;display:flex;align-items:center;gap:14px}
+.btn{
+  font-family:inherit;font-size:13px;font-weight:600;cursor:pointer;border-radius:999px;
+  border:1px solid var(--n300);background:var(--n0);color:var(--n700);
+  padding:8px 15px;transition:border-color .15s,background .15s,color .15s;line-height:1;
+}
+.btn:hover,.btn:focus-visible{border-color:var(--green-600);color:var(--green-700)}
+.btn.arrow{padding:8px 12px;min-width:38px}
+.btn:disabled{opacity:.34;cursor:default}
+.btn:disabled:hover{border-color:var(--n300);color:var(--n700)}
+.crumb{flex:1;min-width:0;font-size:13px;color:var(--n500);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.crumb b{color:var(--n800);font-weight:600}
+.crumb .cn{font-family:var(--font-numeric);color:var(--green-600);font-weight:700;margin-right:7px}
+
+.sec{padding:44px 0 20px}
+.eyebrow{font-size:11.5px;letter-spacing:.15em;text-transform:uppercase;color:var(--green-600);font-weight:700;margin-bottom:14px}
+.sec h2{font-size:clamp(27px,3.7vw,40px);max-width:22ch;margin-bottom:16px}
+.sec .lede{font-size:18px;color:var(--n600);max-width:68ch;line-height:1.5;font-weight:400}
+.body{max-width:72ch}
+.body p{margin-bottom:1.05em;color:var(--n700)}
+h3.sub{font-size:20px;margin:36px 0 14px;letter-spacing:-.01em}
+h4.mini{font-size:12px;letter-spacing:.13em;text-transform:uppercase;color:var(--n500);font-weight:700;margin:32px 0 12px}
+.secfoot{border-top:1px solid var(--n200);margin-top:44px;padding:20px 0 56px;display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.secfoot .sp{flex:1}
+
+/* ---------- COMPONENTS ---------- */
+/* Card con pestaña */
+.tabcard{position:relative;background:var(--n0);border-radius:0 12px 12px 12px;padding:22px 20px 20px;margin-top:30px;box-shadow:var(--shadow-sm);border:1px solid var(--n100)}
+.tabcard>.tab{position:absolute;top:-25px;left:-1px;height:26px;display:inline-flex;align-items:center;gap:7px;padding:0 13px;border-radius:9px 9px 0 0;font-size:11px;font-weight:700;letter-spacing:.11em;text-transform:uppercase}
+.tab-fact{background:var(--green-800);color:var(--green-200)}
+.tab-signal{background:var(--green-200);color:var(--green-800)}
+.tab-hyp{background:var(--lime);color:var(--green-900)}
+.tab-imp{background:var(--n100);color:var(--n600)}
+.tabcard h4{font-size:17.5px;margin-bottom:9px;letter-spacing:-.01em}
+.tabcard p{font-size:15.5px;color:var(--n600);line-height:1.5}
+.tabcard .src{font-size:11.5px;color:var(--n400);margin-top:12px;line-height:1.45}
+.cardgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px 18px;margin-top:34px}
+.cardgrid .tabcard{margin-top:26px}
+
+/* Tiles de estadística */
+.stattiles{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:30px 0}
+.stat{border-radius:14px;padding:20px 17px}
+.stat .f{font-family:var(--font-numeric);font-variant-numeric:tabular-nums;font-weight:300;font-size:clamp(30px,4vw,42px);line-height:1;letter-spacing:-.03em}
+.stat .f sup{font-size:.4em;font-weight:600;vertical-align:super;margin-left:2px}
+.stat .l{font-size:13px;line-height:1.35;margin-top:11px;font-weight:500}
+.stat .s{font-size:10.5px;line-height:1.4;margin-top:7px;opacity:.72}
+.s-mint{background:var(--green-200);color:var(--green-900)}
+.s-cream{background:var(--n100);color:var(--n800)}
+.s-dark{background:var(--green-800);color:var(--n50)}
+.s-dark .f sup{color:var(--green-300)}
+.s-lime{background:var(--lime);color:var(--green-900)}
+
+/* Figure frame */
+.fig{background:var(--n0);border:1px solid var(--n100);border-radius:14px;padding:24px 22px 20px;margin:30px 0;box-shadow:var(--shadow-sm)}
+.fig .cap{font-size:12px;letter-spacing:.11em;text-transform:uppercase;color:var(--n500);font-weight:700;margin-bottom:6px}
+.fig .sub{font-size:12.5px;color:var(--n400);margin-bottom:20px;line-height:1.45;font-weight:400}
+.fig svg{display:block;width:100%;height:auto;overflow:visible}
+
+/* Tabla */
+.tscroll{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:28px 0;border:1px solid var(--n200);border-radius:12px;background:var(--n0)}
+table{border-collapse:collapse;width:100%;min-width:660px;font-size:14px}
+th,td{text-align:left;padding:12px 14px;border-bottom:1px solid var(--n100);vertical-align:top;line-height:1.4}
+thead th{background:var(--green-800);color:var(--green-200);font-size:11px;letter-spacing:.1em;text-transform:uppercase;font-weight:700;border:none;position:sticky;top:0}
+tbody tr:last-child td{border-bottom:none}
+tbody th{font-weight:700;color:var(--n800);background:var(--n50);white-space:nowrap}
+td.np{color:var(--n400);font-style:italic}
+
+/* Callout */
+.callout{border-radius:14px;padding:22px 22px;margin:30px 0;background:linear-gradient(125deg,var(--green-800) 0%,var(--green-600) 62%,var(--green-500) 100%);color:var(--n50)}
+.callout.soft{background:linear-gradient(125deg,var(--green-200) 0%,#DFF9F0 58%,var(--lime) 155%);color:var(--green-900)}
+.callout .k{font-size:11px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;opacity:.72;margin-bottom:9px}
+.callout p{font-size:17px;line-height:1.45;margin:0}
+.callout.big p{font-size:clamp(19px,2.4vw,25px);font-weight:600;letter-spacing:-.01em;line-height:1.3}
+
+/* Chain (AI) */
+.chain{background:var(--n0);border:1px solid var(--n100);border-radius:14px;padding:20px;margin-top:16px;box-shadow:var(--shadow-sm)}
+.chain .ct{font-weight:700;font-size:17px;margin-bottom:14px;letter-spacing:-.01em}
+.chain .ct .cnum{font-family:var(--font-numeric);color:var(--green-500);margin-right:9px}
+.steps{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin-bottom:14px}
+.step{background:var(--n50);border-radius:9px;padding:11px 10px;position:relative}
+.step .sl{font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--green-600);font-weight:700;margin-bottom:5px}
+.step .sv{font-size:12.5px;line-height:1.35;color:var(--n700)}
+.step:nth-child(3){background:var(--green-200)}
+.step:nth-child(5){background:var(--green-800)}
+.step:nth-child(5) .sl{color:var(--green-300)}
+.step:nth-child(5) .sv{color:var(--n50)}
+.precond{font-size:13px;color:var(--n600);background:var(--warn-bg);border-radius:9px;padding:11px 13px;line-height:1.45}
+.precond b{color:var(--n800)}
+
+/* Scenario cards */
+.scen{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:30px 0}
+.scard{background:var(--n0);border:1px solid var(--n100);border-radius:14px;padding:20px 18px;box-shadow:var(--shadow-sm);border-top:4px solid var(--green-500)}
+.scard.a{border-top-color:var(--lime)}
+.scard.p{border-top-color:var(--warn)}
+.scard h4{font-size:17px;margin-bottom:10px}
+.scard p{font-size:14.5px;color:var(--n600);line-height:1.5}
+.scard .means{margin-top:14px;padding-top:13px;border-top:1px solid var(--n100);font-size:13.5px;color:var(--n700)}
+.scard .means b{display:block;font-size:10.5px;letter-spacing:.11em;text-transform:uppercase;color:var(--green-600);margin-bottom:6px}
+
+/* Hypothesis cards */
+.hyp{background:var(--n0);border:1px solid var(--n100);border-radius:14px;padding:20px;margin-top:16px;box-shadow:var(--shadow-sm)}
+.hyp .hh{font-weight:700;font-size:16.5px;line-height:1.3;margin-bottom:14px;letter-spacing:-.01em}
+.hyp .hh .hn{font-family:var(--font-numeric);color:var(--green-500);margin-right:9px}
+.hfields{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.hf{background:var(--n50);border-radius:9px;padding:11px 12px}
+.hf .k{font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--green-600);font-weight:700;margin-bottom:5px}
+.hf .v{font-size:12.5px;line-height:1.35;color:var(--n700)}
+
+/* Inputs list */
+.inp{display:flex;gap:16px;padding:18px 0;border-bottom:1px solid var(--n200)}
+.inp:last-of-type{border-bottom:none}
+.inp .ino{font-family:var(--font-numeric);font-weight:300;font-size:36px;line-height:1;color:var(--green-300);min-width:52px;letter-spacing:-.03em}
+.inp h4{font-size:16.5px;margin-bottom:7px}
+.inp p{font-size:14.5px;color:var(--n600);margin:0;line-height:1.5}
+
+/* Source list */
+.srcs{margin:24px 0 0;padding:0;list-style:none}
+.srcs li{padding:11px 0;border-bottom:1px solid var(--n200);font-size:13.5px;color:var(--n600);line-height:1.5}
+.srcs li:last-child{border-bottom:none}
+.srcs b{color:var(--n800);font-weight:600}
+.srcs a{word-break:break-all;font-size:12.5px}
+
+/* Legend */
+.legend{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:26px 0}
+.lg{border-radius:11px;padding:14px 14px}
+.lg .t{font-size:10.5px;letter-spacing:.11em;text-transform:uppercase;font-weight:700;margin-bottom:7px}
+.lg .d{font-size:12.5px;line-height:1.4}
+
+/* CTA */
+#v-cta .ctawrap{background:linear-gradient(122deg,var(--green-900) 0%,var(--green-700) 34%,var(--green-500) 74%,var(--lime) 140%);border-radius:18px;padding:40px 34px;color:var(--n50);margin:34px 0}
+#v-cta .ctawrap h2{color:var(--n50);max-width:20ch;font-size:clamp(25px,3.3vw,36px)}
+#v-cta .ctawrap p{color:rgba(242,238,235,.9);font-size:17px;max-width:60ch}
+.ctabtns{display:flex;gap:12px;flex-wrap:wrap;margin:28px 0 30px}
+.btn-p{display:inline-flex;align-items:center;gap:9px;background:var(--n50);color:var(--green-900);border-radius:999px;padding:14px 24px;font-weight:700;font-size:15px;text-decoration:none;border:none;transition:transform .15s}
+.btn-p:hover{transform:translateY(-1px)}
+.btn-s{display:inline-flex;align-items:center;gap:9px;background:transparent;color:var(--n50);border:1.5px solid rgba(242,238,235,.5);border-radius:999px;padding:13px 23px;font-weight:600;font-size:15px;text-decoration:none;transition:border-color .15s}
+.btn-s:hover{border-color:var(--n50)}
+.signature{border-top:1px solid rgba(242,238,235,.25);padding-top:22px;font-size:14.5px;line-height:1.65;color:rgba(242,238,235,.88)}
+.signature strong{display:block;font-size:18px;color:var(--n50);font-weight:700;letter-spacing:-.01em}
+.signature a{color:var(--n50)}
+
+/* Responsive */
+@media(max-width:900px){
+  .kpistrip,.stattiles,.legend{grid-template-columns:repeat(2,1fr)}
+  .grid-idx{grid-template-columns:repeat(2,1fr)}
+  .cardgrid,.scen,.hfields{grid-template-columns:1fr}
+  .steps{grid-template-columns:1fr 1fr}
+  .hfields{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:600px){
+  body{font-size:16px}
+  .wrap,.topbar-in{padding-left:18px;padding-right:18px}
+  .grid-idx{grid-template-columns:1fr}
+  .tile.cta-tile{grid-column:span 1}
+  .kpistrip,.stattiles,.legend{grid-template-columns:1fr}
+  .steps{grid-template-columns:1fr}
+  .hfields{grid-template-columns:1fr}
+  .crumb b{display:none}
+  .brandbar{margin-bottom:38px}
+  .meta-right{text-align:left}
+  #v-cta .ctawrap{padding:28px 22px}
+  .inp{flex-direction:column;gap:8px}
+  .inp .ino{font-size:28px}
+}
+</style>
+</head>
+<body>
+
+<!-- ================= HUB ================= -->
+<div id="hub" class="view active" role="region" aria-label="Índice">
+  <div class="wrap">
+    <div class="brandbar">
+      <div class="brandmark">
+        <img class="lcg-logo" alt="London Consulting Group" src="data:image/png;base64,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">
+        <span class="claim">Shape Your Business</span>
+      </div>
+      <div class="meta-right">
+        Preparado para
+        <strong>Jorge de Jesús Montes Guerra</strong>
+        Director General y Presidente del Consejo · Bansí, S.A.<br>
+        Guadalajara, Jalisco · Septiembre de 2026
+      </div>
+    </div>
+
+    <div class="eyebrow-hub">Inteligencia estratégica · Documento privado</div>
+    <h1>El 73% del crecimiento de Bansí vino de <em>un estado donde no tienen una sola sucursal.</em></h1>
+    <p class="lede">Entre 2022 y 2025 la cartera creció 7,910 millones de pesos. Nuevo León aportó 5,741 de ellos, mientras Jalisco se movió apenas diecinueve millones en cuatro años. La apuesta funcionó. La pregunta es qué cuesta sostenerla.</p>
+
+    <div class="kpistrip">
+      <div class="kpi">
+        <div class="kfig num">73<sup>%</sup></div>
+        <div class="lab">del crecimiento de la cartera 2022–2025 vino de Nuevo León</div>
+        <div class="src">Dictaminados y notas trimestrales · cálculo LCG</div>
+      </div>
+      <div class="kpi">
+        <div class="kfig num">0</div>
+        <div class="lab">sucursales en Nuevo León, que hoy es 20.8% de la cartera</div>
+        <div class="src">bansi.com.mx/sucursales · notas trimestrales dic 2025</div>
+      </div>
+      <div class="kpi">
+        <div class="kfig num">25.86<sup>%</sup></div>
+        <div class="lab">de índice de capitalización a junio de 2026. El mínimo regulatorio es 10.5%</div>
+        <div class="src">Bansí, notas trimestrales 2T 2026</div>
+      </div>
+      <div class="kpi">
+        <div class="kfig num">3,800</div>
+        <div class="lab">millones de pesos de cartera de gobierno que vencen en 2026</div>
+        <div class="src">Integración publicada al 31 de diciembre de 2025 · suma parcial</div>
+      </div>
+    </div>
+
+    <div class="idx-head">
+      <h2>Contenido</h2>
+      <span>Catorce secciones · dos minutos de lectura cada una</span>
+    </div>
+    <div class="grid-idx" id="idx"></div>
+
+    <p class="hub-foot">Documento preparado por London Consulting Group México a partir de los estados financieros dictaminados de Bansí, sus notas trimestrales, los reportes de Fitch y S&amp;P, y los registros de la CNBV y Condusef. No contiene información confidencial de Bansí ni de sus clientes. Cada afirmación está clasificada como hecho, señal, hipótesis o implicación, y las limitaciones de la investigación están declaradas en la sección 14.</p>
+  </div>
+</div>
+
+<!-- ================= SECTIONS ================= -->
+<div id="views"></div>
+
+<script>
+/* ============ CONTENT ============ */
+const S = [
+{id:"tesis",n:"01",t:"La tesis",d:"La apuesta ya está hecha. Falta la infraestructura.",html:`
+<div class="body">
+<p>Entre 2022 y 2025 la cartera de crédito de Bansí creció de 22,680 a 30,590 millones de pesos. Casi tres cuartas partes de ese crecimiento vinieron de un solo estado, y no es Jalisco.</p>
+<p><b>Nuevo León pasó de 610 millones de pesos —2.69% de la cartera— a 6,351 millones, el 20.76%.</b> En el mismo periodo, Jalisco se movió de 11,023 a 11,042 millones: diecinueve millones de diferencia en cuatro años. Todo el crecimiento del banco ocurrió fuera de su plaza de origen, y el 73% ocurrió en el mercado empresarial más disputado de México, sin abrir una sola sucursal ahí.</p>
+<p>Eso no es una debilidad. Es la demostración de que el modelo de Bansí puede originar a distancia, algo que la mayoría de los bancos regionales de su tamaño no ha logrado.</p>
+</div>
+
+<div class="callout big">
+  <div class="k">Core Business Hypothesis</div>
+  <p>Bansí ya resolvió el problema difícil —originar fuera de su plaza— y todavía no ha construido la infraestructura que sostenga lo que originó. El mismo movimiento que llevó el 73% del crecimiento a Nuevo León dejó tres marcas medibles: veinte acreditados que son la mitad del libro, un mix de gobierno que migró de muchos municipios pequeños a tasa alta hacia pocos estados grandes a tasa baja, y un ingreso por comisiones que cayó 7.2% en 2025 mientras el patrimonio fiduciario administrado crecía 11.2%. La hipótesis es que el banco sabe con precisión cuánto cuesta <em>colocar</em> fuera de Jalisco, y todavía no cuánto cuesta <em>sostenerlo</em> — y que 2026, con un muro de vencimientos de gobierno de al menos 3,800 millones y un índice de capitalización de 25.86%, es el año en que esa diferencia deja de ser teórica.</p>
+</div>
+
+<div class="fig">
+  <div class="cap">De dónde vino el crecimiento · cartera de crédito por entidad, 2022 y 2025</div>
+  <div class="sub">Cifras en millones de pesos, tomadas del riesgo de crédito clasificado por región en los estados financieros dictaminados y en las notas trimestrales al cierre de cada ejercicio.</div>
+  <svg viewBox="0 0 700 250" role="img" aria-label="Crecimiento de cartera por entidad 2022 a 2025">
+    <defs><linearGradient id="gJ" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#C2B8AB"/><stop offset="100%" stop-color="#DCD4C9"/></linearGradient>
+    <linearGradient id="gN" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#03B585"/><stop offset="100%" stop-color="#7FE0C0"/></linearGradient></defs>
+    <text x="0" y="18" font-size="11.5" font-weight="700" fill="#756C63" letter-spacing="1.2">JALISCO</text>
+    <rect x="0" y="28" width="330" height="26" rx="13" fill="url(#gJ)"/><text x="342" y="46" font-size="13" font-weight="700" fill="#574F49">11,023 · 2022</text>
+    <rect x="0" y="62" width="331" height="26" rx="13" fill="url(#gJ)"/><text x="343" y="80" font-size="13" font-weight="700" fill="#574F49">11,042 · 2025</text>
+    <text x="490" y="64" font-size="12.5" font-weight="700" fill="#9A9086">+19 mdp en cuatro años</text>
+    <text x="0" y="128" font-size="11.5" font-weight="700" fill="#039271" letter-spacing="1.2">NUEVO LEÓN</text>
+    <rect x="0" y="138" width="18" height="26" rx="9" fill="url(#gN)"/><text x="30" y="156" font-size="13" font-weight="700" fill="#0A7568">610 · 2022</text>
+    <rect x="0" y="172" width="190" height="26" rx="13" fill="url(#gN)"/><text x="202" y="190" font-size="13" font-weight="700" fill="#0A7568">6,351 · 2025</text>
+    <text x="330" y="190" font-size="12.5" font-weight="700" fill="#039271">más de diez veces, sin sucursal en el estado</text>
+    <line x1="0" y1="216" x2="700" y2="216" stroke="#E9E3DC"/>
+    <text x="0" y="240" font-size="13" font-weight="700" fill="#085E54">73% de todo el crecimiento de la cartera entre 2022 y 2025 vino de Nuevo León.</text>
+  </svg>
+</div>
+
+<div class="body">
+<p>La hipótesis es refutable y esa es la intención. Si Bansí ya tiene medido el costo de servir por peso colocado en Nuevo León contra el de Jalisco, y la diferencia está donde debe, la tesis se cae y esta conversación dura diez minutos. Si no está medido, la primera pregunta del estudio de factibilidad ya está escrita.</p>
+</div>
+`},
+
+{id:"resuelto",n:"02",t:"Lo que ya está resuelto",d:"El inventario de capacidades, con cifras.",html:`
+<div class="body"><p>Antes de proponer nada conviene decir con precisión qué no hace falta proponer. Con los estados financieros dictaminados, los reportes de las dos calificadoras y los registros de Condusef sobre la mesa, esto no es una cortesía: es aritmética.</p></div>
+
+<div class="stattiles">
+  <div class="stat s-dark"><div class="kfig f num">45.8<sup>%</sup></div><div class="l">de su margen financiero se va en gastos de administración. El sistema gasta 57.9%</div><div class="s">CNBV, Boletín Estadístico, jul 2026 · cálculo LCG</div></div>
+  <div class="stat s-mint"><div class="f num">65<sup>mdp</sup></div><div class="l">de cartera por empleado, contra 33.9 del sistema</div><div class="s">CNBV, Boletín e Info. Operativa, jul 2026 · cálculo LCG</div></div>
+  <div class="stat s-lime"><div class="f num">9.88</div><div class="l">de índice de atención a usuarios, contra 9.20 del sector</div><div class="s">Condusef, Buró de Entidades Financieras, ene–mar 2026</div></div>
+  <div class="stat s-cream"><div class="f num">17.4</div><div class="l">reclamaciones por cada 10 mil contratos. El sector promedia 37.3</div><div class="s">Condusef, Buró de Entidades Financieras, ene–mar 2026</div></div>
+</div>
+
+<div class="cardgrid">
+  <div class="tabcard"><span class="tab tab-fact">Hecho</span>
+    <h4>Cero sanciones, cero multas, el índice de reclamación más bajo del grupo</h4>
+    <p>En enero–marzo de 2026 el Buró de Entidades Financieras reporta para Bansí 50 reclamaciones totales, ninguna sanción, ningún monto de multa y ninguna práctica no sana. En el mismo corte el sector acumuló 14 sanciones y más de un millón de pesos en multas.</p>
+    <p class="src">Condusef, Buró de Entidades Financieras, comportamiento general de bancos, ene–mar 2026.</p>
+  </div>
+  <div class="tabcard"><span class="tab tab-fact">Hecho</span>
+    <h4>Rentabilidad superior a todos sus pares medianos calificados</h4>
+    <p>Al cierre de 2024 Fitch registró una utilidad operativa sobre activos ponderados por riesgo de 5.7%, máximo histórico y superior a la de todos los bancos medianos que califica en México. S&amp;P reportó un retorno sobre capital de 17.2% al cierre de 2025 y calcula que el margen de interés neto de Bansí corre unos 230 puntos base por encima del de sus pares con la misma calificación.</p>
+    <p class="src">Fitch Ratings, 23 de mayo de 2025; S&amp;P Global Ratings, 18 de marzo de 2026.</p>
+  </div>
+  <div class="tabcard"><span class="tab tab-fact">Hecho</span>
+    <h4>Cero dividendos, capital creciendo al doble de velocidad que el libro</h4>
+    <p>Ambas calificadoras documentan retención del 100% de utilidades y pago nulo de dividendos sostenido en el tiempo. El capital contable pasó de 5,805 millones en diciembre de 2023 a 9,052 en julio de 2026: 56% de aumento, contra 19% de la cartera en el mismo periodo.</p>
+    <p class="src">CNBV, Boletín Estadístico, dic 2023 y jul 2026; Fitch Ratings 2024–2026; S&amp;P 2026.</p>
+  </div>
+  <div class="tabcard"><span class="tab tab-fact">Hecho</span>
+    <h4>Capacidad de originación remota ya demostrada</h4>
+    <p>La cartera en Nuevo León se multiplicó por más de diez entre 2022 y 2025 sin presencia física en el estado. En el mismo periodo Bansí entró a Chihuahua, que al cierre de 2025 ya pesaba 5.93% de la cartera, y también sin oficina. Pocas instituciones de trece sucursales pueden acreditar algo así.</p>
+    <p class="src">Estados financieros dictaminados 2023–2024 y notas trimestrales al 31 de diciembre de 2025.</p>
+  </div>
+  <div class="tabcard"><span class="tab tab-signal">Señal</span>
+    <h4>La estructura está construida para un banco más grande</h4>
+    <p>Bansí sostiene direcciones separadas de Operación, Crédito, Sistemas, Contraloría, Contabilidad, Auditoría, Jurídico, Cumplimiento Normativo, Prevención del Fraude, Control de Gasto, Fiduciario, Mercados Financieros, Derivados y Cambios, con comisario del despacho Mancera, integrante de Ernst &amp; Young Global Limited. Esa arquitectura ya está pagada.</p>
+    <p class="src">bansi.com.mx/gobierno-corporativo, consultado el 24 de septiembre de 2026.</p>
+  </div>
+  <div class="tabcard"><span class="tab tab-signal">Señal</span>
+    <h4>El consejo es, a la vez, el mercado</h4>
+    <p>El consejo lo integran mayoritariamente directores generales de empresas jaliscienses de construcción, industria alimenticia, agroindustria, curtiduría y desarrollo de sistemas. El órgano de gobierno y el canal de originación comparten la misma red — una ventaja de acceso que ningún competidor digital puede replicar, y que por definición no se extiende a Monterrey.</p>
+    <p class="src">bansi.com.mx/gobierno-corporativo, consultado el 24 de septiembre de 2026.</p>
+  </div>
+</div>
+
+<div class="callout soft">
+  <div class="k">Consecuencia para esta pieza</div>
+  <p>Quedan descartadas, por evidencia, las cinco tesis obvias: que a Bansí le falta eficiencia, tecnología, disciplina de gasto, calidad de servicio o capacidad de salir de su plaza. Las cinco son falsas y comprobablemente falsas. Lo que sigue parte de ahí.</p>
+</div>
+`},
+
+{id:"hallazgos",n:"03",t:"Hallazgos clave",d:"Ocho observaciones con fuente, clasificadas.",html:`
+<div class="body"><p>Todo proviene de estados financieros dictaminados, notas trimestrales, reportes de calificadoras y registros de la CNBV y Condusef. Señal es indicio; hipótesis es interpretación nuestra y puede refutarse.</p></div>
+
+<div class="cardgrid">
+  <div class="tabcard"><span class="tab tab-fact">Hecho</span>
+    <h4>Jalisco lleva cuatro años plano en monto absoluto</h4>
+    <p>11,023 millones en 2022; 12,265 en 2023; 11,210 en 2024; 11,042 en 2025. Su participación en la cartera cayó de 48.6% a 36.10% no porque encogiera, sino porque el resto creció.</p>
+    <p class="src">Dictaminados 2023 y 2024; notas trimestrales a diciembre de 2025.</p>
+  </div>
+  <div class="tabcard"><span class="tab tab-fact">Hecho</span>
+    <h4>Nuevo León aportó 73% del crecimiento de cuatro años</h4>
+    <p>La cartera total creció 7,910 millones entre 2022 y 2025. Nuevo León aportó 5,741 de esos millones, pasando de 610 a 6,351. Del saldo de 2025, unos 1,367 millones corresponden a crédito al gobierno del estado; el resto es cartera no gubernamental.</p>
+    <p class="src">Dictaminados y notas trimestrales, integración de créditos a entidades gubernamentales al 31 de diciembre de 2025.</p>
+  </div>
+  <div class="tabcard"><span class="tab tab-fact">Hecho</span>
+    <h4>Veinte acreditados son la mitad del libro</h4>
+    <p>Al cierre de 2025 los 20 acreditados principales representaron 50% del portafolio y 1.6 veces el capital. El propio banco revela que sus cuatro mayores deudores sumaban 5,890 millones al cierre de 2024, equivalentes a 86.87% de la parte básica del capital neto.</p>
+    <p class="src">S&amp;P Global Ratings, 18 de marzo de 2026; estados financieros dictaminados al 31 de diciembre de 2024.</p>
+  </div>
+  <div class="tabcard"><span class="tab tab-fact">Hecho</span>
+    <h4>Las tasas del libro de gobierno se desplomaron</h4>
+    <p>En la integración al cierre de 2024, los créditos a entidades gubernamentales corrían entre 12.23% y 17.38%. Al cierre de 2025 el rango es de 7.20% a 12.45%. Los nuevos créditos grandes —Sonora a 7.85%, Nuevo León a 7.86%, Pensiones de Durango a 7.20%— entraron muy por debajo del libro que sustituyen.</p>
+    <p class="src">Dictaminado al 31 de diciembre de 2024 y notas trimestrales al 31 de diciembre de 2025.</p>
+  </div>
+  <div class="tabcard"><span class="tab tab-fact">Hecho</span>
+    <h4>El ingreso por comisiones cae mientras el negocio crece</h4>
+    <p>Las comisiones cobradas pasaron de 498 millones en 2024 a 462 en 2025, una caída de 7.2%. En el mismo año el patrimonio fiduciario administrado creció de 81,053 a 90,108 millones, y el ingreso fiduciario bajó de 103 a 96 millones.</p>
+    <p class="src">Notas trimestrales al 31 de diciembre de 2025, notas de comisiones y de cuentas de orden.</p>
+  </div>
+  <div class="tabcard"><span class="tab tab-fact">Hecho</span>
+    <h4>La cartera se está encogiendo en 2026</h4>
+    <p>De 30,590 millones en diciembre de 2025 a 27,758 en julio de 2026. La integración de créditos gubernamentales publicada al cierre de 2025 muestra vencimientos de al menos 3,800 millones concentrados en el segundo semestre de 2026.</p>
+    <p class="src">CNBV, Boletín Estadístico, dic 2025 y jul 2026; notas trimestrales a diciembre de 2025. Cifras intraanuales.</p>
+  </div>
+  <div class="tabcard"><span class="tab tab-fact">Hecho</span>
+    <h4>El capital ya rebasó el umbral que S&amp;P vigila</h4>
+    <p>El índice de capitalización al 30 de junio de 2026 fue de 25.86%, con capital básico y fundamental en el mismo nivel. S&amp;P señaló en marzo que revisaría su evaluación de capital a «muy fuerte» si el indicador se mantenía consistentemente por encima de 25%.</p>
+    <p class="src">Bansí, notas trimestrales al 30 de junio de 2026; S&amp;P Global Ratings, 18 de marzo de 2026.</p>
+  </div>
+  <div class="tabcard"><span class="tab tab-hyp">Hipótesis</span>
+    <h4>El costo de sostener no creció al ritmo del costo de colocar</h4>
+    <p>Crecer con tickets grandes y remotos es barato de originar y caro de sostener: seguimiento, visita, renovación y recuperación ocurren lejos, sin red local. La caída simultánea de comisiones y de tasas sugiere que el mix migró hacia operaciones de menor rendimiento por peso administrado. Refutable con el costo de servir por plaza, que el banco sí puede calcular.</p>
+    <p class="src">Hipótesis de LCG derivada de los hechos anteriores.</p>
+  </div>
+</div>
+`},
+
+{id:"capital",n:"04",t:"El capital que no se despliega",d:"La aritmética de casi trece mil millones.",html:`
+<div class="body"><p>Esta sección contiene un solo cálculo, sobre cifras regulatorias publicadas, que cualquiera puede rehacer en treinta segundos.</p></div>
+
+<div class="fig">
+  <div class="cap">Capital contable y cartera de crédito · índice base 100 en diciembre de 2023</div>
+  <div class="sub">Serie de la CNBV. La cifra de julio de 2026 es un corte mensual, no un cierre de ejercicio.</div>
+  <svg viewBox="0 0 700 260" role="img" aria-label="Capital contra cartera, indexado">
+    <defs>
+      <linearGradient id="gCap" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#03B585" stop-opacity=".5"/><stop offset="100%" stop-color="#BAF4E9" stop-opacity=".05"/></linearGradient>
+      <linearGradient id="gCar" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#C2B8AB" stop-opacity=".45"/><stop offset="100%" stop-color="#E9E3DC" stop-opacity=".05"/></linearGradient>
+    </defs>
+    <line x1="56" y1="200" x2="680" y2="200" stroke="#DCD4C9"/>
+    <line x1="56" y1="140" x2="680" y2="140" stroke="#E9E3DC" stroke-dasharray="3 4"/>
+    <line x1="56" y1="80" x2="680" y2="80" stroke="#E9E3DC" stroke-dasharray="3 4"/>
+    <line x1="56" y1="20" x2="680" y2="20" stroke="#E9E3DC" stroke-dasharray="3 4"/>
+    <text x="16" y="204" font-size="11" fill="#9A9086">100</text><text x="16" y="144" font-size="11" fill="#9A9086">120</text>
+    <text x="16" y="84" font-size="11" fill="#9A9086">140</text><text x="20" y="24" font-size="11" fill="#9A9086">160</text>
+    <path d="M100 200 L290 135 L480 76 L640 32 L640 200 L100 200 Z" fill="url(#gCap)"/>
+    <path d="M100 200 L290 159 L480 155 L640 143 L640 200 L100 200 Z" fill="url(#gCar)"/>
+    <path d="M100 200 L290 135 L480 76 L640 32" fill="none" stroke="#03B585" stroke-width="3" stroke-linejoin="round"/>
+    <path d="M100 200 L290 159 L480 155 L640 143" fill="none" stroke="#9A9086" stroke-width="2.5" stroke-dasharray="6 4" stroke-linejoin="round"/>
+    <g fill="#FFFEFC" stroke="#03B585" stroke-width="3"><circle cx="100" cy="200" r="5"/><circle cx="290" cy="135" r="5"/><circle cx="480" cy="76" r="5"/><circle cx="640" cy="32" r="5"/></g>
+    <text x="640" y="20" text-anchor="end" font-size="12.5" font-weight="700" fill="#0A7568">Capital 156</text>
+    <text x="640" y="166" text-anchor="end" font-size="12.5" font-weight="700" fill="#756C63">Cartera 119</text>
+    <g text-anchor="middle" font-size="12" fill="#574F49"><text x="100" y="226">dic 2023</text><text x="290" y="226">dic 2024</text><text x="480" y="226">dic 2025</text><text x="640" y="226">jul 2026</text></g>
+    <text x="56" y="252" font-size="12" fill="#039271" font-weight="600">Dos años y medio: el capital sube 56 puntos, la cartera 19.</text>
+  </svg>
+</div>
+
+<div class="body">
+<h3 class="sub">El cálculo</h3>
+<p>Al 31 de julio de 2026 Bansí reporta 9,052 millones de pesos de capital contable y 27,758 millones de cartera. Son <b>3.07 veces</b>. El conjunto de la banca múltiple opera, en el mismo corte, a <b>4.48 veces</b>.</p>
+<p>Al apalancamiento promedio del sistema, con exactamente el mismo capital, la cartera sería de unos 40,550 millones. La diferencia es de cerca de <b>12,800 millones de pesos de capacidad crediticia sin desplegar</b>. El propio banco reporta un índice de capitalización de 25.86% al cierre de junio de 2026, contra un mínimo regulatorio de 10.5% y un umbral de alerta de Fitch en 14%.</p>
+</div>
+
+<div class="stattiles">
+  <div class="stat s-dark"><div class="f num">3.07<sup>x</sup></div><div class="l">Cartera sobre capital contable de Bansí, julio 2026</div><div class="s">CNBV · cálculo LCG</div></div>
+  <div class="stat s-cream"><div class="f num">4.48<sup>x</sup></div><div class="l">Misma razón para el conjunto de la banca múltiple</div><div class="s">CNBV · cálculo LCG</div></div>
+  <div class="stat s-lime"><div class="f num">25.86<sup>%</sup></div><div class="l">Índice de capitalización al 30 de junio de 2026, sobre 34,435 mdp de activos en riesgo</div><div class="s">Bansí, notas trimestrales 2T 2026</div></div>
+  <div class="stat s-mint"><div class="f num">14<sup>%</sup></div><div class="l">Umbral bajo el cual Fitch consideraría una acción negativa</div><div class="s">Fitch Ratings, 14 may 2026</div></div>
+</div>
+
+<div class="callout">
+  <div class="k">Las tres lecturas posibles, y por qué importa cuál es</div>
+  <p>El diferencial admite exactamente tres explicaciones. Una: es una decisión deliberada de apetito de riesgo y el consejo lo quiere así. Dos: es restricción de originación — no hay suficiente flujo de operaciones que cumplan el criterio de crédito. Tres: es restricción de capacidad — hay operaciones, pero no estructura para originarlas, evaluarlas y darles seguimiento fuera de las trece plazas. Las tres producen el mismo número y requieren proyectos completamente distintos. Determinar cuál es toma una sesión con Dirección de Crédito y Dirección de Operación.</p>
+</div>
+
+<div class="body">
+<p class="src" style="font-size:12.5px;color:#9A9086">Aclaración metodológica: cartera sobre capital contable no es una medida regulatoria y no sustituye al índice de capitalización, que pondera por riesgo. Se usa porque es verificable en una sola división. La conclusión no depende del cociente: con ICAP de 25.86% frente a un mínimo de 10.5%, el capital no es la restricción bajo ninguna métrica.</p>
+</div>
+`},
+
+{id:"nuevoleon",n:"05",t:"La conquista de Nuevo León",d:"Cuatro años de reasignación geográfica.",html:`
+<div class="body"><p>El movimiento estratégico más importante de Bansí en la última década no aparece en ningún comunicado. Está en una tabla al final de sus estados financieros dictaminados, y se lee en cuatro renglones.</p></div>
+
+<div class="tscroll">
+<table>
+<thead><tr><th>Entidad</th><th>2022</th><th>%</th><th>2023</th><th>%</th><th>2024</th><th>%</th><th>2025</th><th>%</th></tr></thead>
+<tbody>
+<tr><th>Jalisco</th><td>11,023</td><td>48.6%</td><td>12,265</td><td>51.7%</td><td>11,210</td><td>41.1%</td><td>11,042</td><td>36.1%</td></tr>
+<tr><th>Nuevo León</th><td>610</td><td>2.7%</td><td class="np">no listado</td><td class="np">—</td><td>4,673</td><td>17.1%</td><td><b>6,351</b></td><td><b>20.8%</b></td></tr>
+<tr><th>Sonora</th><td>1,861</td><td>8.2%</td><td>2,790</td><td>11.7%</td><td>966</td><td>3.5%</td><td>2,300</td><td>7.5%</td></tr>
+<tr><th>Chihuahua</th><td class="np">no listado</td><td class="np">—</td><td class="np">no listado</td><td class="np">—</td><td class="np">no listado</td><td class="np">—</td><td>1,813</td><td>5.9%</td></tr>
+<tr><th>San Luis Potosí</th><td>806</td><td>3.6%</td><td>1,740</td><td>7.3%</td><td>1,149</td><td>4.2%</td><td>608</td><td>2.0%</td></tr>
+<tr><th>Durango</th><td>806</td><td>3.6%</td><td class="np">no listado</td><td class="np">—</td><td>1,624</td><td>6.0%</td><td>751</td><td>2.5%</td></tr>
+<tr><th>Cartera total</th><td>22,680</td><td>100%</td><td>23,724</td><td>100%</td><td>27,257</td><td>100%</td><td>30,590</td><td>100%</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="body"><p class="src" style="font-size:12.5px;color:#9A9086">Cifras en millones de pesos, del riesgo de crédito clasificado por región. Fuentes: estados financieros dictaminados al 31 de diciembre de 2023 y 2024, y notas trimestrales al 31 de diciembre de 2025. «No listado» significa que la entidad no apareció entre las principales de ese año y quedó agrupada en «Otros»; no significa exposición cero.</p></div>
+
+<div class="fig">
+  <div class="cap">Cartera por entidad contra red de sucursales</div>
+  <div class="sub">Participación al cierre de 2025 frente al número de sucursales publicado por Bansí. Esquema comparativo, no mapa a escala.</div>
+  <svg viewBox="0 0 700 250" role="img" aria-label="Cartera por estado contra sucursales">
+    <text x="0" y="16" font-size="11" font-weight="700" fill="#756C63" letter-spacing="1.1">% DE LA CARTERA · CIERRE 2025</text>
+    <text x="440" y="16" font-size="11" font-weight="700" fill="#756C63" letter-spacing="1.1">SUCURSALES</text>
+    <g font-size="13.5">
+      <text x="0" y="52" font-weight="700" fill="#3D3733">Jalisco</text>
+      <rect x="120" y="38" width="216" height="20" rx="10" fill="#03B585"/><text x="346" y="53" font-size="13" font-weight="700" fill="#0A7568">36.1%</text>
+      <rect x="440" y="38" width="130" height="20" rx="10" fill="#BAF4E9"/><text x="580" y="53" font-size="13" font-weight="700" fill="#0A7568">6</text>
+
+      <text x="0" y="96" font-weight="700" fill="#3D3733">Nuevo León</text>
+      <rect x="120" y="82" width="124" height="20" rx="10" fill="#C9E265"/><text x="254" y="97" font-size="13" font-weight="700" fill="#7E8F2E">20.8%</text>
+      <rect x="440" y="82" width="6" height="20" rx="3" fill="#DCD4C9"/><text x="456" y="97" font-size="13" font-weight="700" fill="#C0503F">0</text>
+
+      <text x="0" y="140" font-weight="700" fill="#3D3733">Sonora</text>
+      <rect x="120" y="126" width="45" height="20" rx="10" fill="#7FE0C0"/><text x="175" y="141" font-size="13" font-weight="700" fill="#0A7568">7.5%</text>
+      <rect x="440" y="126" width="22" height="20" rx="10" fill="#BAF4E9"/><text x="472" y="141" font-size="13" font-weight="700" fill="#0A7568">1</text>
+
+      <text x="0" y="184" font-weight="700" fill="#3D3733">Chihuahua</text>
+      <rect x="120" y="170" width="35" height="20" rx="10" fill="#C9E265"/><text x="165" y="185" font-size="13" font-weight="700" fill="#7E8F2E">5.9%</text>
+      <rect x="440" y="170" width="6" height="20" rx="3" fill="#DCD4C9"/><text x="456" y="185" font-size="13" font-weight="700" fill="#C0503F">0</text>
+    </g>
+    <text x="0" y="226" font-size="12.5" fill="#039271" font-weight="600">Más de una cuarta parte del libro vive en dos estados donde no hay una sola oficina.</text>
+    <text x="0" y="244" font-size="11.5" fill="#9A9086">Fuentes: notas trimestrales al 31 de diciembre de 2025; bansi.com.mx/sucursales, 24 de septiembre de 2026.</text>
+  </svg>
+</div>
+
+<div class="cardgrid">
+  <div class="tabcard"><span class="tab tab-imp">Implicación</span>
+    <h4>Monterrey es la plaza más difícil del país para este modelo</h4>
+    <p>Es sede de los bancos empresariales regionales más agresivos de México y concentra 13.4% del financiamiento bancario nacional, sólo detrás de la Ciudad de México. Sostener ahí una quinta parte de la cartera con el modelo de Ejecutivo Universal y sin presencia física plantea una pregunta operativa concreta y contestable: quién visita a esos clientes, con qué frecuencia y desde dónde.</p>
+  </div>
+  <div class="tabcard"><span class="tab tab-hyp">Hipótesis</span>
+    <h4>La decisión de abrir plaza está pendiente, no tomada</h4>
+    <p>El precedente propio es Hermosillo: crédito estructurado al municipio en 2020, oficina en Torre Hermosillo en 2023. Si ese patrón aplicara, Nuevo León —con un peso cuatro veces mayor del que tenía Sonora entonces— sería la siguiente plaza natural. Que no haya ocurrido en cuatro años sugiere que la decisión está abierta o que el costo de servir remoto todavía no se ha comparado contra el de abrir.</p>
+  </div>
+</div>
+`},
+
+{id:"gobierno",n:"06",t:"Gobierno y el muro de 2026",d:"Un tercio de la cartera y un calendario apretado.",html:`
+<div class="body">
+<p>Bansí publica, en sus estados financieros, la lista completa de sus créditos a entidades gubernamentales: nombre, capital, tasa y fecha de vencimiento. Muy pocos bancos lo hacen con ese nivel de detalle, y esa transparencia permite ver dos cosas que ninguna otra fuente muestra.</p>
+<h3 class="sub">Primera: el mix cambió de raíz</h3>
+<p>La integración al cierre de 2024 estaba dominada por municipios pequeños a tasas altas: decenas de créditos de uno a diez millones de pesos, en municipios como Dzemul, Quiriego, Ignacio Zaragoza o Coacoatzintla, a tasas de entre 13% y 17.4%. La integración al cierre de 2025 está dominada por pocas operaciones grandes a tasas mucho menores.</p>
+</div>
+
+<div class="tscroll">
+<table>
+<thead><tr><th>Principales acreditados de gobierno · cierre 2025</th><th>Capital (mdp)</th><th>Tasa</th><th>Vencimiento</th></tr></thead>
+<tbody>
+<tr><th>Fideicomiso de Puentes Fronterizos de Chihuahua</th><td>1,765</td><td>9.10%</td><td>dic 2044</td></tr>
+<tr><th>Fideproes</th><td>1,755</td><td>8.20%</td><td>jun 2027</td></tr>
+<tr><th>Gobierno del Estado de Sonora</th><td>1,200</td><td>7.85%</td><td>oct 2026</td></tr>
+<tr><th>Gobierno del Estado de Nuevo León</th><td>800</td><td>7.86%</td><td>jun 2026</td></tr>
+<tr><th>Municipio de Ensenada</th><td>590</td><td>9.80%</td><td>feb 2035</td></tr>
+<tr><th>Gobierno del Estado de Nuevo León</th><td>567</td><td>11.35%</td><td>may 2027</td></tr>
+<tr><th>Estado de Nayarit</th><td>563</td><td>9.39%</td><td>dic 2026</td></tr>
+<tr><th>Municipio de Hermosillo</th><td>429</td><td>9.30%</td><td>ene 2036</td></tr>
+<tr><th>Gobierno del Estado de Durango</th><td>394</td><td>8.05%</td><td>dic 2026</td></tr>
+<tr><th>Dirección de Pensiones del Estado de Durango</th><td>310</td><td>7.20%</td><td>dic 2026</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="body"><p class="src" style="font-size:12.5px;color:#9A9086">Extracto de la integración de créditos a entidades gubernamentales al 31 de diciembre de 2025. La lista completa publicada incluye alrededor de treinta acreditados adicionales. Fuente: Bansí, notas trimestrales a diciembre de 2025.</p></div>
+
+<div class="body">
+<h3 class="sub">Segunda: el calendario de 2026 está cargado</h3>
+<p>Sumando únicamente las operaciones con vencimiento en 2026 que aparecen en la lista publicada —Sonora, Nuevo León, Nayarit, Durango, Pensiones de Durango, Los Cabos, Puerto Vallarta, Chihuahua, Jiutepec, Comondú, Cuautla, Coacalco, Loreto, Ciudad Valles, Mulegé y Huatabampo— el total supera los <b>3,800 millones de pesos</b>, casi todo concentrado entre junio y diciembre.</p>
+<p>Eso coincide exactamente con lo observado: la cartera pasó de 30,590 millones en diciembre de 2025 a 27,758 en julio de 2026, una reducción de 2,832 millones. S&amp;P había anticipado en marzo un año de volumen alto de pagos y amortizaciones, y proyectaba aun así un crecimiento anual cercano a 6%.</p>
+</div>
+
+<div class="callout">
+  <div class="k">Por qué esto convierte 2026 en el año de la decisión</div>
+  <p>Para cerrar el año creciendo, Bansí necesita reoriginar más de cuatro mil millones de pesos sólo para reponer lo que vence, y hacerlo a tasas que ya no son las de 2024. Si lo reemplaza con operaciones del mismo perfil, la concentración no baja. Si lo reemplaza con muchas operaciones medianas, baja — y ahí la restricción deja de ser el balance y pasa a ser la capacidad de originar y dar seguimiento. La conversación sobre estructura operativa tiene, por primera vez, una fecha límite natural.</p>
+</div>
+`},
+
+{id:"fiduciario",n:"07",t:"El negocio invisible",d:"Noventa mil millones fuera del balance.",html:`
+<div class="body">
+<p>En cuentas de orden, Bansí administra un patrimonio fiduciario que casi nadie fuera del banco conoce y que es tres veces su cartera de crédito.</p>
+</div>
+
+<div class="stattiles">
+  <div class="stat s-dark"><div class="f num">90,108</div><div class="l">millones de pesos en fideicomisos administrados al cierre de 2025</div><div class="s">Notas trimestrales dic 2025, cuentas de orden</div></div>
+  <div class="stat s-mint"><div class="f num">11.2<sup>%</sup></div><div class="l">de crecimiento del patrimonio fiduciario contra 2024</div><div class="s">Cálculo LCG sobre la misma fuente</div></div>
+  <div class="stat s-lime"><div class="f num">96</div><div class="l">millones de pesos de ingreso fiduciario en 2025, contra 103 en 2024</div><div class="s">Notas trimestrales dic 2025</div></div>
+  <div class="stat s-cream"><div class="f num">10.7<sup>pb</sup></div><div class="l">de ingreso por cada peso administrado, contra 12.7 en 2024</div><div class="s">Cálculo LCG</div></div>
+</div>
+
+<div class="body">
+<p>La composición al cierre de 2025 es de 54,864 millones en fideicomisos en garantía y 35,244 millones en fideicomisos de administración. Los de administración crecieron 28% en el año; los de garantía, 2.5%.</p>
+<p>El dato incómodo está en la última tarjeta. <b>El patrimonio administrado creció 11.2% y el ingreso que genera cayó 6.8%.</b> Medido por peso administrado, el rendimiento del negocio fiduciario pasó de 12.7 a 10.7 puntos base en un año. Eso puede explicarse por el mix —los fideicomisos en garantía asociados a crédito propio suelen cobrarse distinto que los de administración—, por presión de precio, o por estructura de costos. Las tres explicaciones son plausibles y sólo una de ellas es indiferente para el negocio.</p>
+</div>
+
+<div class="fig">
+  <div class="cap">Composición de las comisiones cobradas, 2023 a 2025</div>
+  <div class="sub">Millones de pesos. Fuente: notas de comisiones y tarifas de los estados financieros dictaminados y trimestrales.</div>
+  <svg viewBox="0 0 700 250" role="img" aria-label="Comisiones cobradas por concepto">
+    <g font-size="12" fill="#574F49">
+      <text x="0" y="24" font-weight="700" fill="#756C63" letter-spacing="1">CONCEPTO</text>
+      <text x="420" y="24" text-anchor="middle" font-weight="700" fill="#9A9086">2023</text>
+      <text x="520" y="24" text-anchor="middle" font-weight="700" fill="#9A9086">2024</text>
+      <text x="630" y="24" text-anchor="middle" font-weight="700" fill="#085E54">2025</text>
+
+      <text x="0" y="58" font-weight="600">Servicios de banca electrónica</text>
+      <rect x="200" y="44" width="180" height="18" rx="9" fill="#BAF4E9"/>
+      <text x="420" y="58" text-anchor="middle">256</text><text x="520" y="58" text-anchor="middle">258</text><text x="630" y="58" text-anchor="middle" font-weight="700">258</text>
+
+      <text x="0" y="96" font-weight="600">Fiduciario</text>
+      <rect x="200" y="82" width="67" height="18" rx="9" fill="#03B585"/>
+      <text x="420" y="96" text-anchor="middle">97</text><text x="520" y="96" text-anchor="middle">103</text><text x="630" y="96" text-anchor="middle" font-weight="700" fill="#C0503F">96</text>
+
+      <text x="0" y="134" font-weight="600">Créditos</text>
+      <rect x="200" y="120" width="53" height="18" rx="9" fill="#C9E265"/>
+      <text x="420" y="134" text-anchor="middle">60</text><text x="520" y="134" text-anchor="middle">91</text><text x="630" y="134" text-anchor="middle" font-weight="700" fill="#C0503F">76</text>
+
+      <text x="0" y="172" font-weight="600">Otros y avalúos</text>
+      <rect x="200" y="158" width="22" height="18" rx="9" fill="#DCD4C9"/>
+      <text x="420" y="172" text-anchor="middle">40</text><text x="520" y="172" text-anchor="middle">46</text><text x="630" y="172" text-anchor="middle" font-weight="700" fill="#C0503F">32</text>
+    </g>
+    <line x1="0" y1="190" x2="700" y2="190" stroke="#DCD4C9"/>
+    <g font-size="13" font-weight="700" fill="#085E54">
+      <text x="0" y="214">Total comisiones cobradas</text>
+      <text x="420" y="214" text-anchor="middle">453</text><text x="520" y="214" text-anchor="middle">498</text><text x="630" y="214" text-anchor="middle">462</text>
+    </g>
+    <text x="0" y="240" font-size="12" fill="#039271" font-weight="600">La banca electrónica lleva tres años clavada en 258. Todo lo demás cayó en 2025.</text>
+  </svg>
+</div>
+
+<div class="callout soft">
+  <div class="k">Lo que esto abre</div>
+  <p>Hay tres líneas de ingreso no financiero —fiduciario, comisiones de crédito y banca electrónica— que en conjunto mueven 462 millones de pesos al año y que se comportan como si nadie fuera dueño de su rentabilidad unitaria. En un banco donde el margen de interés está bajo presión por tasas, esas tres líneas son la diversificación de ingresos que Fitch dice que Bansí busca. Ninguna de las tres exige capital nuevo: exigen pricing, costo de servir y proceso.</p>
+</div>
+`},
+
+{id:"calificadoras",n:"08",t:"Lo que piden Fitch y S&P",d:"Dos agencias, una sola condición.",html:`
+<div class="body"><p>Bansí es calificado por dos agencias que trabajan con metodologías distintas y llegan, de forma independiente, a la misma conclusión sobre qué lo separa de una calificación más alta.</p></div>
+
+<div class="fig">
+  <div class="cap">Descomposición de la calificación de S&amp;P · marzo de 2026</div>
+  <div class="sub">Clasificación de componentes publicada por la agencia. Un solo componente por encima del ancla; los otros tres, por debajo.</div>
+  <svg viewBox="0 0 700 230" role="img" aria-label="Componentes de la calificación de S&amp;P">
+    <line x1="350" y1="18" x2="350" y2="196" stroke="#C2B8AB" stroke-dasharray="4 4"/>
+    <text x="350" y="216" text-anchor="middle" font-size="11" fill="#9A9086">ancla</text>
+    <g font-size="13.5" font-weight="600">
+      <text x="0" y="46" fill="#3D3733">Capital y utilidades</text>
+      <rect x="352" y="32" width="150" height="20" rx="10" fill="#03B585"/><text x="512" y="47" font-size="13" font-weight="700" fill="#0A7568">Fuerte (+1)</text>
+      <text x="0" y="94" fill="#3D3733">Posición del negocio</text>
+      <rect x="200" y="80" width="148" height="20" rx="10" fill="#C9E265"/><text x="192" y="95" text-anchor="end" font-size="13" font-weight="700" fill="#7E8F2E">Moderada (−1)</text>
+      <text x="0" y="142" fill="#3D3733">Posición de riesgo</text>
+      <rect x="200" y="128" width="148" height="20" rx="10" fill="#C9E265"/><text x="192" y="143" text-anchor="end" font-size="13" font-weight="700" fill="#7E8F2E">Moderada (−1)</text>
+      <text x="0" y="190" fill="#3D3733">Fondeo y liquidez</text>
+      <rect x="200" y="176" width="148" height="20" rx="10" fill="#C9E265"/><text x="192" y="191" text-anchor="end" font-size="12.5" font-weight="700" fill="#7E8F2E">Inf. al promedio (−1)</text>
+    </g>
+  </svg>
+</div>
+
+<div class="body">
+<p>Los tres componentes evaluados por debajo del ancla tienen la misma raíz. La posición de negocio se limita por diversificación; la de riesgo, por concentración de acreditados y sectores; el fondeo, por concentración de depositantes —veinte sostienen 30% del total. Es un solo problema visto desde tres ángulos, y el único componente por encima es, precisamente, el capital que no se está desplegando.</p>
+</div>
+
+<div class="cardgrid">
+  <div class="tabcard"><span class="tab tab-fact">Hecho · Fitch</span>
+    <h4>La ruta al alza, según Fitch</h4>
+    <p>La agencia condiciona una acción positiva a una mejora sustancial del perfil de negocio marcada por un <em>"incremento sostenido de sus IOT y que reduzca sus concentraciones crediticias"</em>, manteniendo utilidad operativa sobre activos ponderados cercana a 3% y capitalización cercana a 17%. Los dos umbrales financieros ya están cubiertos con holgura: al primer trimestre de 2026, 4.3% y 24.7%.</p>
+    <p class="src">Fitch Ratings, afirmación en A+(mex) y F1(mex), perspectiva estable, 14 de mayo de 2026.</p>
+  </div>
+  <div class="tabcard"><span class="tab tab-fact">Hecho · S&amp;P</span>
+    <h4>La ruta al alza, según S&amp;P</h4>
+    <p>La agencia revisaría al alza si observara <em>"una reducción sostenida en las concentraciones por acreditado y por sector económico"</em>, junto con calidad de activos estable y un índice de capitalización creciente, y añade como factor adicional una mayor pulverización de la base de depósitos. El ICAP ya superó, en junio, el umbral de 25% que la propia agencia señaló en marzo.</p>
+    <p class="src">S&amp;P Global Ratings, mxA/Estable/mxA-1, análisis actualizado, 18 de marzo de 2026.</p>
+  </div>
+</div>
+
+<div class="callout">
+  <div class="k">Lo que esto convierte en un problema de operación</div>
+  <p>Ninguna agencia pide más capital, mejor margen o menor gasto: Bansí ya gana en los tres. Ambas piden lo mismo — más clientes, mejor repartidos, sin sacrificar volumen. Eso no se decide en un comité: se ejecuta con capacidad comercial y con proceso. Es la primera vez en este análisis que una meta estratégica del banco se traduce, sin intermediarios, en una pregunta de estructura operativa.</p>
+</div>
+`},
+
+{id:"mercado",n:"09",t:"El mercado y el outlook",d:"Tasas, jornada 2027 y tres escenarios.",html:`
+<div class="stattiles">
+  <div class="stat s-dark"><div class="f num">7.0<sup>%</sup></div><div class="l">Tasa de referencia en dic 2025, tras caer 300 puntos base en el año</div><div class="s">HR Ratings, 9 mar 2026</div></div>
+  <div class="stat s-mint"><div class="f num">1.0<sup>%</sup></div><div class="l">Crecimiento real de la cartera comercial del sistema en 2025, contra 7.9% en 2024</div><div class="s">HR Ratings, 9 mar 2026</div></div>
+  <div class="stat s-lime"><div class="f num">7.0<sup>%</sup></div><div class="l">Contracción real del financiamiento a entidades gubernamentales en 2025</div><div class="s">HR Ratings, 9 mar 2026</div></div>
+  <div class="stat s-cream"><div class="f num">53</div><div class="l">Instituciones de banca múltiple operando en 2026, contra 50 en 2023</div><div class="s">HR Ratings y prensa sectorial vía ABM</div></div>
+</div>
+
+<div class="body">
+<p>La combinación es incómoda para un banco con un tercio de la cartera en gobiernos locales: el segmento se contrajo 7.0% real en 2025 y el financiamiento total al sector público 16.1%. No es señal de deterioro de Bansí — es señal de que el segmento donde más pesa está encogiendo a nivel nacional, justo cuando el banco necesita colocar capital y reponer vencimientos.</p>
+</div>
+
+<h3 class="sub">El forzador con fecha cierta</h3>
+<div class="fig">
+  <div class="cap">Calendario de reducción de la jornada máxima semanal</div>
+  <div class="sub">Artículos transitorios del decreto. La reducción no puede implicar disminución de sueldos, salarios ni prestaciones.</div>
+  <svg viewBox="0 0 700 190" role="img" aria-label="Calendario de la jornada laboral">
+    <defs><linearGradient id="gPill" x1="0" y1="1" x2="0" y2="0"><stop offset="0%" stop-color="#0A7568"/><stop offset="100%" stop-color="#7FE0C0"/></linearGradient></defs>
+    <rect x="46" y="34" width="58" height="102" rx="29" fill="#DCD4C9"/>
+    <rect x="176" y="46" width="58" height="90" rx="29" fill="url(#gPill)"/>
+    <rect x="306" y="58" width="58" height="78" rx="29" fill="url(#gPill)"/>
+    <rect x="436" y="70" width="58" height="66" rx="29" fill="url(#gPill)"/>
+    <rect x="566" y="82" width="58" height="54" rx="29" fill="#C9E265"/>
+    <g text-anchor="middle" font-weight="700" font-size="17" fill="#085E54" font-family="Manrope">
+      <text x="75" y="26">48h</text><text x="205" y="38">46h</text><text x="335" y="50">44h</text><text x="465" y="62">42h</text><text x="595" y="74">40h</text>
+    </g>
+    <g text-anchor="middle" font-size="12.5" fill="#574F49">
+      <text x="75" y="158">2026</text><text x="205" y="158" font-weight="700" fill="#085E54">2027</text><text x="335" y="158">2028</text><text x="465" y="158">2029</text><text x="595" y="158">2030</text>
+    </g>
+    <text x="205" y="178" text-anchor="middle" font-size="11.5" font-weight="700" fill="#039271">Primer escalón obligatorio</text>
+  </svg>
+</div>
+
+<div class="body">
+<p>La reforma constitucional se publicó en el Diario Oficial el 3 de marzo de 2026 y la de la Ley Federal del Trabajo el 1 de mayo. El primer escalón es el 1 de enero de 2027. Para Bansí la lectura es contraintuitiva: sus sucursales atienden al público de lunes a viernes de 9:00 a 16:00 —treinta y cinco horas—, de modo que la reforma no le impone un costo nuevo, sino que le quita a sus competidores una ventaja que Bansí llevaba treinta años pagando.</p>
+<p>Hay un subproducto útil: la reforma obliga a registrar electrónicamente la jornada de cada persona, con horarios de inicio y término. El banco va a generar ese dato de todas formas. La decisión es si se queda en un archivo de cumplimiento o se convierte en la primera medición seria de en qué se va el tiempo del equipo.</p>
+</div>
+
+<h3 class="sub">Outlook 2026–2029</h3>
+<div class="scen">
+  <div class="scard">
+    <h4>Base · continuidad</h4>
+    <p>Crecimiento económico moderado y tasa de referencia convergiendo a niveles menos restrictivos. S&amp;P proyectaba para Bansí un crecimiento de cartera cercano a 6% en doce meses.</p>
+    <div class="means"><b>Qué significaría</b>El capital sigue acumulándose más rápido que el libro, la razón de cartera a capital sigue bajando y la concentración no cede sola. La ruta al alza de calificación queda donde está.</div>
+  </div>
+  <div class="scard a">
+    <h4>Aceleración · el Plan México aterriza</h4>
+    <p>La ejecución del plan federal de infraestructura y financiamiento a empresas pequeñas y medianas eleva la demanda de crédito empresarial, con quince polos de desarrollo regional como foco.</p>
+    <div class="means"><b>Qué significaría</b>Es el escenario donde el capital ocioso se vuelve ventaja: hay con qué prestar cuando otros ya están apalancados. El límite deja de ser el balance y pasa a ser cuántas operaciones puede procesar y sostener el equipo.</div>
+  </div>
+  <div class="scard p">
+    <h4>Presión · márgenes, gobierno y cumplimiento</h4>
+    <p>Tasas más bajas comprimen el ingreso por intereses, el segmento de gobierno sigue contrayéndose y el costo de cumplimiento en prevención de lavado y supervisión prudencial sigue subiendo.</p>
+    <div class="means"><b>Qué significaría</b>El escenario que más pega: un tercio de la cartera está en el segmento que se contrae, el muro de vencimientos cae en el mismo año y el costo fijo regulatorio se reparte entre trece sucursales, no entre mil.</div>
+  </div>
+</div>
+`},
+
+{id:"benchmark",n:"10",t:"Benchmark competitivo",d:"Cifras regulatorias, no impresiones.",html:`
+<div class="body"><p>Las variables se definieron antes que las empresas, a partir del reto: cuánta cartera sostiene cada persona, cuánto capital se está usando y cuánto cuesta operar. Los referentes son bancos de nicho comparables por modelo, no por tamaño. Todas las cifras provienen del mismo corte de la CNBV, julio de 2026.</p></div>
+
+<div class="tscroll">
+<table>
+<thead><tr><th>Institución</th><th>Cartera<br>(mdp)</th><th>Suc.</th><th>Empleados</th><th>Cartera por<br>empleado (mdp)</th><th>Empleados<br>por sucursal</th><th>Gasto admin /<br>margen fin.</th><th>Cartera /<br>capital</th></tr></thead>
+<tbody>
+<tr><th>Bansí</th><td>27,758</td><td>13</td><td>426</td><td><b>65.2</b></td><td>32.8</td><td><b>45.8%</b></td><td><b>3.07x</b></td></tr>
+<tr><th>Sistema</th><td>8,465,416</td><td>11,240</td><td>249,747</td><td>33.9</td><td>22.2</td><td>57.9%</td><td>4.48x</td></tr>
+<tr><th>Bancrea</th><td>50,120</td><td>20</td><td>808</td><td>62.0</td><td>40.4</td><td>57.9%</td><td>8.47x</td></tr>
+<tr><th>Ve por Más</th><td>69,558</td><td>22</td><td>1,187</td><td>58.6</td><td>54.0</td><td>64.5%</td><td>6.18x</td></tr>
+<tr><th>Banca Mifel</th><td>96,456</td><td>100</td><td>2,185</td><td>44.1</td><td>21.9</td><td>51.5%</td><td>5.21x</td></tr>
+<tr><th>Banco del Bajío</th><td>297,587</td><td>337</td><td>7,020</td><td>42.4</td><td>20.8</td><td>50.1%</td><td>6.19x</td></tr>
+<tr><th>Banregio</th><td>192,614</td><td>226</td><td>5,941</td><td>32.4</td><td>26.3</td><td>49.5%</td><td>5.38x</td></tr>
+<tr><th>Multiva</th><td>116,329</td><td>41</td><td>1,374</td><td>84.7</td><td>33.5</td><td>69.8%</td><td>9.68x</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="body"><p class="src" style="font-size:12.5px;color:#9A9086">Fuentes: CNBV, Boletín Estadístico de Banca Múltiple y Portafolio de Información Operativa, julio de 2026. Cocientes calculados por LCG. Gasto administrativo y margen financiero son flujos acumulados de siete meses. Se excluyeron Banco Base y Actinver, cuyos modelos —cambiario y bursátil— hacen que la razón de gasto a margen financiero no sea comparable.</p></div>
+
+<div class="fig">
+  <div class="cap">Productividad por persona contra uso del capital</div>
+  <div class="sub">Ubicación derivada de las cifras de la tabla anterior. Ejes numéricos reales, no un scoring cualitativo.</div>
+  <svg viewBox="0 0 700 330" role="img" aria-label="Cartera por empleado contra cartera sobre capital">
+    <rect x="70" y="20" width="600" height="250" fill="#FFFEFC" stroke="#E9E3DC"/>
+    <line x1="70" y1="145" x2="670" y2="145" stroke="#E9E3DC" stroke-dasharray="4 5"/>
+    <line x1="270" y1="20" x2="270" y2="270" stroke="#E9E3DC" stroke-dasharray="4 5"/>
+    <text x="370" y="296" text-anchor="middle" font-size="11.5" font-weight="700" fill="#756C63" letter-spacing="1.1">CARTERA SOBRE CAPITAL CONTABLE (VECES) →</text>
+    <text x="-145" y="22" transform="rotate(-90)" font-size="11.5" font-weight="700" fill="#756C63" letter-spacing="1.1">CARTERA POR EMPLEADO (MDP) →</text>
+    <text x="80" y="38" font-size="10.5" fill="#9A9086">3x</text><text x="262" y="288" font-size="10.5" fill="#9A9086">4.5x</text><text x="660" y="288" font-size="10.5" fill="#9A9086">10x</text>
+    <circle cx="120" cy="52" r="14" fill="#03B585"/><text x="142" y="50" font-size="13.5" font-weight="700" fill="#085E54">Bansí</text><text x="142" y="66" font-size="11.5" fill="#756C63">65.2 mdp · 3.07x</text>
+    <circle cx="268" cy="188" r="11" fill="#C2B8AB"/><text x="286" y="192" font-size="12.5" font-weight="600" fill="#3D3733">Sistema</text>
+    <circle cx="530" cy="62" r="11" fill="#C9E265"/><text x="548" y="66" font-size="12.5" font-weight="600" fill="#3D3733">Multiva</text>
+    <circle cx="470" cy="70" r="11" fill="#7FE0C0"/><text x="400" y="74" font-size="12.5" font-weight="600" fill="#3D3733">Bancrea</text>
+    <circle cx="378" cy="84" r="11" fill="#7FE0C0"/><text x="300" y="100" font-size="12.5" font-weight="600" fill="#3D3733">Ve por Más</text>
+    <circle cx="322" cy="140" r="11" fill="#7FE0C0"/><text x="338" y="136" font-size="12.5" font-weight="600" fill="#3D3733">Mifel</text>
+    <circle cx="380" cy="148" r="11" fill="#7FE0C0"/><text x="396" y="152" font-size="12.5" font-weight="600" fill="#3D3733">BanBajío</text>
+    <circle cx="332" cy="196" r="11" fill="#7FE0C0"/><text x="240" y="214" font-size="12.5" font-weight="600" fill="#3D3733">Banregio</text>
+    <text x="70" y="322" font-size="12" fill="#039271" font-weight="600">Bansí está solo en su esquina: la mayor productividad por persona con el menor uso de capital del grupo.</text>
+  </svg>
+</div>
+
+<div class="callout">
+  <div class="k">Lectura del benchmark</div>
+  <p>Ese cuadrante superior izquierdo no es cómodo: es inusual. Bansí extrae más de cada persona que casi cualquiera de sus pares y, a la vez, usa menos de su capital que todos ellos. Ninguna otra institución del grupo combina ambas cosas. La pregunta que abre es si la segunda es el precio de la primera — es decir, si el equipo que hoy sostiene 65 millones por cabeza simplemente no da para sostener más relaciones.</p>
+</div>
+`},
+
+{id:"ia",n:"11",t:"IA y agentes",d:"Seis cadenas para abaratar la relación remota.",html:`
+<div class="body">
+<p>Una aclaración que aquí no es retórica: <b>el criterio de crédito no se automatiza y la relación tampoco</b>. Lo que un Ejecutivo Universal sabe de un cliente después de quince años no cabe en un modelo, y el día que Bansí intente meterlo ahí habrá destruido su propia propuesta de valor.</p>
+<p>El objetivo de esta sección se deriva de la tesis: <b>bajar el costo en horas de sostener una relación que está a novecientos kilómetros</b>. Ninguna cadena incluye promesa de retorno.</p>
+</div>
+
+<div class="chain">
+  <div class="ct"><span class="cnum num">01</span>Seguimiento de acreditados en plazas sin sucursal</div>
+  <div class="steps">
+    <div class="step"><div class="sl">Proceso</div><div class="sv">Atención a clientes en Nuevo León y Chihuahua</div></div>
+    <div class="step"><div class="sl">Fricción</div><div class="sv">Más de una cuarta parte del libro sin red local que lo visite</div></div>
+    <div class="step"><div class="sl">Agente</div><div class="sv">Prepara informe por cliente antes de cada contacto y prioriza la agenda del viaje</div></div>
+    <div class="step"><div class="sl">Acción</div><div class="sv">Saldos, exposición, vencimientos y pendientes en una página</div></div>
+    <div class="step"><div class="sl">Resultado</div><div class="sv">La frecuencia de contacto deja de depender de la distancia</div></div>
+  </div>
+  <div class="precond"><b>Condición previa de datos:</b> que la figura de Cliente Único esté unificada en los sistemas y no sólo en el modelo de atención. Es el punto que abre la bifurcación del final de esta sección.</div>
+</div>
+
+<div class="chain">
+  <div class="ct"><span class="cnum num">02</span>Vigilancia de la concentración en tiempo real</div>
+  <div class="steps">
+    <div class="step"><div class="sl">Proceso</div><div class="sv">Seguimiento de límites por acreditado, sector y estado</div></div>
+    <div class="step"><div class="sl">Fricción</div><div class="sv">La concentración se mide al cierre; las decisiones se toman todos los días</div></div>
+    <div class="step"><div class="sl">Agente</div><div class="sv">Recalcula el efecto de cada operación sobre los tres ejes</div></div>
+    <div class="step"><div class="sl">Acción</div><div class="sv">Señala si una operación acerca o aleja de la meta de diversificación</div></div>
+    <div class="step"><div class="sl">Resultado</div><div class="sv">La meta de calificación entra al comité de crédito</div></div>
+  </div>
+  <div class="precond"><b>Condición previa de datos:</b> una definición única de riesgo común y de sector económico aplicada de forma consistente a toda la cartera. Es el caso con conexión más directa a la tesis y el primero que probaríamos.</div>
+</div>
+
+<div class="chain">
+  <div class="ct"><span class="cnum num">03</span>Gestión del calendario de vencimientos y reoriginación</div>
+  <div class="steps">
+    <div class="step"><div class="sl">Proceso</div><div class="sv">Reposición de cartera que amortiza</div></div>
+    <div class="step"><div class="sl">Fricción</div><div class="sv">Más de 3,800 millones vencen en un solo semestre</div></div>
+    <div class="step"><div class="sl">Agente</div><div class="sv">Proyecta el perfil de amortización y el hueco por mes y por plaza</div></div>
+    <div class="step"><div class="sl">Acción</div><div class="sv">Convierte el calendario en metas de originación por ejecutivo</div></div>
+    <div class="step"><div class="sl">Resultado</div><div class="sv">El hueco se ve con meses de anticipación, no al cierre</div></div>
+  </div>
+  <div class="precond"><b>Condición previa de datos:</b> tabla de amortizaciones contractuales por crédito. Existe por definición en el core bancario; el trabajo es exponerla como información de gestión y no sólo como insumo contable.</div>
+</div>
+
+<div class="chain">
+  <div class="ct"><span class="cnum num">04</span>Armado del expediente de crédito empresarial</div>
+  <div class="steps">
+    <div class="step"><div class="sl">Proceso</div><div class="sv">Integración del expediente para comité</div></div>
+    <div class="step"><div class="sl">Fricción</div><div class="sv">Cuesta casi lo mismo armar un crédito de 10 millones que uno de 500</div></div>
+    <div class="step"><div class="sl">Agente</div><div class="sv">Ensambla el borrador y señala faltantes</div></div>
+    <div class="step"><div class="sl">Acción</div><div class="sv">Expediente prearmado y lista de pendientes al ejecutivo</div></div>
+    <div class="step"><div class="sl">Resultado</div><div class="sv">El ticket mediano deja de ser antieconómico</div></div>
+  </div>
+  <div class="precond"><b>Condición previa de datos:</b> expedientes digitalizados con estructura consistente y un criterio único de completitud documental. Si hoy cada ejecutivo arma el expediente a su manera, el primer trabajo es estandarizar, no automatizar.</div>
+</div>
+
+<div class="chain">
+  <div class="ct"><span class="cnum num">05</span>Vigilancia de coberturas en crédito subnacional</div>
+  <div class="steps">
+    <div class="step"><div class="sl">Proceso</div><div class="sv">Seguimiento de créditos a gobiernos locales y regionales</div></div>
+    <div class="step"><div class="sl">Fricción</div><div class="sv">Las calificadoras revisan aforos una vez al año; dos tercios de esta cartera no tiene garantía de participaciones</div></div>
+    <div class="step"><div class="sl">Agente</div><div class="sv">Monitorea finanzas públicas publicadas y recalcula coberturas</div></div>
+    <div class="step"><div class="sl">Acción</div><div class="sv">Señala desviación contra el escenario base del crédito</div></div>
+    <div class="step"><div class="sl">Resultado</div><div class="sv">Bansí se entera antes que la calificadora</div></div>
+  </div>
+  <div class="precond"><b>Condición previa de datos:</b> los insumos son públicos, lo que hace a este caso el más fácil de arrancar. Lo que hay que construir es el modelo de cobertura por crédito, que Bansí ya tiene en su análisis original.</div>
+</div>
+
+<div class="chain">
+  <div class="ct"><span class="cnum num">06</span>Apoyo al monitoreo transaccional de prevención de lavado</div>
+  <div class="steps">
+    <div class="step"><div class="sl">Proceso</div><div class="sv">Revisión de alertas transaccionales</div></div>
+    <div class="step"><div class="sl">Fricción</div><div class="sv">Más clientes nuevos significa más alertas con la misma plantilla</div></div>
+    <div class="step"><div class="sl">Agente</div><div class="sv">Preintegra el caso con contexto y antecedentes</div></div>
+    <div class="step"><div class="sl">Acción</div><div class="sv">Entrega el expediente ordenado; la decisión la toma siempre una persona</div></div>
+    <div class="step"><div class="sl">Resultado</div><div class="sv">Desconcentrar no multiplica la carga de cumplimiento</div></div>
+  </div>
+  <div class="precond"><b>Condición previa de datos y gobernanza:</b> exige trazabilidad completa de cómo se construyó cada caso, explicabilidad ante el supervisor y ninguna decisión automatizada. Es el de mayor valor potencial y mayor exigencia de control; no debe ser el primero.</div>
+</div>
+
+<h3 class="sub">La pregunta que define el alcance</h3>
+<div class="body"><p>Qué tan integrado está el sistema que sostiene la figura de Cliente Único no es público. Bansí lo sabe; nosotros no, y no vamos a adivinarlo. Lo planteamos como bifurcación: los tres escenarios son plausibles, el trabajo que implican es distinto, y determinar cuál aplica toma una sesión con Sistemas y Operación.</p></div>
+
+<div class="scen">
+  <div class="scard">
+    <h4>Escenario A · Núcleo integrado</h4>
+    <p>El core ya consolida la posición del cliente entre cuentas, crédito, mesa de cambios, derivados y fideicomiso, y el ejecutivo la consulta en una sola vista.</p>
+    <div class="means"><b>Entonces el trabajo es</b>Explotación de datos existentes: vigilancia de concentración, calendario de vencimientos, informes por cliente. Proyecto corto, sin dependencia de integración.</div>
+  </div>
+  <div class="scard a">
+    <h4>Escenario B · Sistemas que conviven</h4>
+    <p>El Cliente Único existe como modelo de atención, pero se reconstruye con consultas a varios sistemas o con captura complementaria fuera de ellos.</p>
+    <div class="means"><b>Entonces el trabajo empieza antes</b>Integración y eliminación de doble captura. Es donde aparece la mayor parte de las horas perdidas y también la mayor recuperación posible.</div>
+  </div>
+  <div class="scard p">
+    <h4>Escenario C · Mixto por línea</h4>
+    <p>Integrado en banca tradicional y separado en mesas, fiduciario y crédito subnacional — lo más común cuando las líneas se construyeron en momentos distintos a lo largo de treinta años.</p>
+    <div class="means"><b>Entonces el trabajo se prioriza</b>Se interviene primero la línea con mayor peso en cartera y mayor oportunidad de desconcentración; las demás entran por fases.</div>
+  </div>
+</div>
+
+<div class="callout soft">
+  <div class="k">Gobernanza, antes que tecnología</div>
+  <p>En un banco supervisado todo modelo debe poder explicarse ante el regulador, y los datos de clientes están cubiertos por secreto bancario. Cualquier trabajo de este tipo empieza por definir qué información puede salir del perímetro, con qué disociación y bajo qué convenio. London Consulting Group trabaja con capacidades de inteligencia artificial de Anthropic bajo condiciones empresariales de tratamiento de datos, y ese marco se define en el contrato, no en la implementación.</p>
+</div>
+`},
+
+{id:"hipotesis",n:"12",t:"Hipótesis a validar",d:"Seis hipótesis refutables, con indicador y área.",html:`
+<div class="body"><p>Seis, no ocho: salen de la evidencia que existe. Formuladas para poder ser desmentidas con datos que Bansí ya tiene. Si tres se caen en la primera sesión, el prediagnóstico habrá valido la pena igual.</p></div>
+
+<div class="hyp">
+  <div class="hh"><span class="hn num">H1</span>El costo de servir por peso colocado en Nuevo León y Chihuahua es materialmente mayor que en Jalisco, y esa diferencia no está asignada hoy a ninguna línea de resultado.</div>
+  <div class="hfields">
+    <div class="hf"><div class="k">Indicador</div><div class="v">Costo total asignado sobre cartera, por entidad federativa</div></div>
+    <div class="hf"><div class="k">Impacto posible</div><div class="v">Criterio objetivo para decidir si abrir plaza en Monterrey</div></div>
+    <div class="hf"><div class="k">Información necesaria</div><div class="v">Contabilidad analítica por plaza y bitácora de visitas y viáticos</div></div>
+    <div class="hf"><div class="k">Área</div><div class="v">Finanzas · Control de Gasto · Negocios</div></div>
+  </div>
+</div>
+
+<div class="hyp">
+  <div class="hh"><span class="hn num">H2</span>El costo en horas de originar un crédito es casi independiente del tamaño del ticket, lo que vuelve antieconómica la operación mediana y sostiene la concentración.</div>
+  <div class="hfields">
+    <div class="hf"><div class="k">Indicador</div><div class="v">Horas de ejecutivo, crédito y jurídico por operación, contra monto</div></div>
+    <div class="hf"><div class="k">Impacto posible</div><div class="v">Viabilidad económica del ticket mediano</div></div>
+    <div class="hf"><div class="k">Información necesaria</div><div class="v">Bitácora de originación de 24 meses y muestreo de actividad</div></div>
+    <div class="hf"><div class="k">Área</div><div class="v">Crédito · Operación · Jurídico</div></div>
+  </div>
+</div>
+
+<div class="hyp">
+  <div class="hh"><span class="hn num">H3</span>La brecha entre el apalancamiento de Bansí y el del sistema se explica por restricción de originación o de capacidad, no por decisión deliberada de apetito de riesgo.</div>
+  <div class="hfields">
+    <div class="hf"><div class="k">Indicador</div><div class="v">Solicitudes recibidas, tasa de rechazo y motivo, por plaza</div></div>
+    <div class="hf"><div class="k">Impacto posible</div><div class="v">Despliegue de capacidad crediticia hoy inactiva</div></div>
+    <div class="hf"><div class="k">Información necesaria</div><div class="v">Pipeline comercial y actas de comité de crédito</div></div>
+    <div class="hf"><div class="k">Área</div><div class="v">Negocios · Crédito · Dirección General</div></div>
+  </div>
+</div>
+
+<div class="hyp">
+  <div class="hh"><span class="hn num">H4</span>La rentabilidad unitaria del negocio fiduciario se está erosionando por mix y por costo de servir, no por precio de mercado.</div>
+  <div class="hfields">
+    <div class="hf"><div class="k">Indicador</div><div class="v">Ingreso y horas por vehículo fiduciario, por tipo</div></div>
+    <div class="hf"><div class="k">Impacto posible</div><div class="v">Recuperación de margen sobre 90 mil millones ya administrados</div></div>
+    <div class="hf"><div class="k">Información necesaria</div><div class="v">Padrón de fideicomisos con tarifa, tipo y carga de trabajo</div></div>
+    <div class="hf"><div class="k">Área</div><div class="v">Fiduciario · Jurídico · Finanzas</div></div>
+  </div>
+</div>
+
+<div class="hyp">
+  <div class="hh"><span class="hn num">H5</span>La reposición de la cartera que vence en 2026 no está planeada por mes ni asignada por ejecutivo, y se está gestionando por reacción.</div>
+  <div class="hfields">
+    <div class="hf"><div class="k">Indicador</div><div class="v">Pipeline comprometido contra perfil de amortización mensual</div></div>
+    <div class="hf"><div class="k">Impacto posible</div><div class="v">Diferencia entre cerrar el año creciendo o encogiendo</div></div>
+    <div class="hf"><div class="k">Información necesaria</div><div class="v">Tabla de amortizaciones y metas comerciales vigentes</div></div>
+    <div class="hf"><div class="k">Área</div><div class="v">Negocios · Crédito · Finanzas</div></div>
+  </div>
+</div>
+
+<div class="hyp">
+  <div class="hh"><span class="hn num">H6</span>El esfuerzo de cumplimiento normativo por operación crece más rápido que el negocio, lo que encarece cada relación nueva y refuerza el incentivo a concentrar.</div>
+  <div class="hfields">
+    <div class="hf"><div class="k">Indicador</div><div class="v">Horas de cumplimiento por cada cien operaciones, 2023–2026</div></div>
+    <div class="hf"><div class="k">Impacto posible</div><div class="v">Contención del costo marginal de un cliente nuevo</div></div>
+    <div class="hf"><div class="k">Información necesaria</div><div class="v">Volumen de alertas, tasa de falsos positivos y plantilla dedicada</div></div>
+    <div class="hf"><div class="k">Área</div><div class="v">Cumplimiento Normativo · Sistemas</div></div>
+  </div>
+</div>
+`},
+
+{id:"prediagnostico",n:"13",t:"Prediagnóstico",d:"Los siete inputs del Estudio de Factibilidad.",html:`
+<div class="body">
+<p>El marco metodológico es fijo. Lo que cambia por cuenta es el alcance y el acceso dentro de los dos primeros inputs. Para Bansí hay una particularidad que conviene resolver en la primera sesión: el secreto bancario. El convenio debe contemplar desde el borrador inicial la disociación de datos de clientes; planteado tarde, el jurídico detiene el estudio dos semanas.</p>
+</div>
+
+<div style="background:var(--n0);border:1px solid var(--n100);border-radius:14px;padding:22px 24px;margin:26px 0;box-shadow:var(--shadow-sm)">
+  <div class="inp"><div class="ino num">01</div><div><h4>Alcance y estrategia del estudio</h4><p>Entendimiento de los retos estratégicos, definición de alcance por áreas, responsables y ubicación geográfica, designación del <em>sponsor</em>, y entendimiento del modelo de gobierno: consejo, socios y tomadores de decisión. Para Bansí proponemos tres cortes: matriz Guadalajara, una plaza foránea de una sola sucursal, y la operación que atiende Nuevo León sin oficina. Son tres estructuras de costo distintas y la comparación entre ellas es el corazón del estudio.</p></div></div>
+  <div class="inp"><div class="ino num">02</div><div><h4>Recolección de información básica</h4><p>Convenio de confidencialidad, inducción general, organigramas, estados financieros, indicadores de juntas directivas y operativas, manuales de proceso o sistemas de calidad, y reunión de perfilamiento. Aquí se requiere acceso a bases de datos; sin eso el ejercicio se queda en observación y pierde la mitad de su valor.</p></div></div>
+  <div class="inp"><div class="ino num">03</div><div><h4>Comunicación y entrevistas</h4><p>Diseño y acuerdo del plan de entrevistas con apoyo del <em>sponsor</em>, arranque oficial con objetivos, alcance y factores clave de éxito, ejecución de entrevistas y reuniones de validación. Los mandos medios y el personal de piso saben dónde está el problema mucho antes que cualquier reporte.</p></div></div>
+  <div class="inp"><div class="ino num">04</div><div><h4>Gemba Walk</h4><p><em>Gemba</em> significa «el lugar real» en japonés: donde el trabajo ocurre y donde se genera el valor. Recorrido estructurado por sucursal, mesa y áreas de soporte para observar el proceso donde sucede, no como lo describe un manual. Se observan flujos de expediente y de personas, tiempos de ciclo, puntos de espera y reprocesos — y se pregunta a quien ejecuta la tarea, no a quien la supervisa. En esta cuenta el recorrido incluye acompañar una visita a un acreditado fuera de plaza: ahí es donde el costo de servir se vuelve visible.</p></div></div>
+  <div class="inp"><div class="ino num">05</div><div><h4>Estadística agéntica</h4><p>Con las bases que comparte el cliente se ejecutan estudios estadísticos apoyados en inteligencia artificial agéntica para identificar áreas de oportunidad. Los agentes cruzan cartera, captación, operación, tiempos y estructura buscando patrones invisibles base por base: dispersión de productividad entre plazas y ejecutivos, relación entre tamaño de ticket y costo de originación, rentabilidad por vehículo fiduciario, comportamientos atípicos por entidad y por sector.</p></div></div>
+  <div class="inp"><div class="ino num">06</div><div><h4>Nivel de Madurez Organizacional</h4><p>Mide la capacidad de la empresa para la mejora continua sobre tres dimensiones: personas y cultura, procesos y estructuras, y tecnología, con benchmarks operativos y financieros de empresas similares. Cinco niveles, de inicial a optimizado. El resultado no es una calificación: es el punto de partida contra el que se mide el avance del proyecto.</p></div></div>
+  <div class="inp"><div class="ino num">07</div><div><h4>Growth Management</h4><p>Encuesta de sesenta y ocho reactivos que mide la mentalidad de los líderes y los aspectos organizacionales clave, en cuatro bloques: estrategia y objetivos, liderazgo y cultura, adaptabilidad y cambio, y digitalización y eficiencia operativa.</p></div></div>
+</div>
+
+<div class="callout">
+  <div class="k">El entregable, que no es un input</div>
+  <p>Una Propuesta de proyecto construida sobre los siete anteriores: oportunidades cuantificadas en pesos, beneficios esperados, metodología de implementación, cronograma, inversión y retorno. Si las oportunidades no justifican el proyecto, se dice. Ese también es un resultado válido del estudio, y es la razón por la que el prediagnóstico se puede aceptar sin haber decidido nada más.</p>
+</div>
+
+<div class="stattiles">
+  <div class="stat s-dark"><div class="f num">1:1</div><div class="l">Retorno garantizado por contrato sobre la inversión del cliente</div><div class="s">Metodología London</div></div>
+  <div class="stat s-mint"><div class="f num">5:1</div><div class="l">Promedio histórico de retorno de los proyectos de LCG</div><div class="s">Metodología London</div></div>
+  <div class="stat s-lime"><div class="f num">7:1</div><div class="l">HDI · caso publicado en growth stories</div><div class="s">londoncg.mx/growth-stories</div></div>
+  <div class="stat s-cream"><div class="f num">2:1</div><div class="l">Banbajío · caso publicado en growth stories</div><div class="s">londoncg.mx/growth-stories</div></div>
+</div>
+`},
+
+{id:"metodologia",n:"14",t:"Metodología y límites",d:"Cómo se hizo, qué no pudimos saber y por qué.",html:`
+<div class="body">
+<p>Este documento se construyó con información pública y regulatoria: los estados financieros dictaminados y las notas trimestrales que Bansí publica en su propio sitio, los reportes de las dos calificadoras que lo evalúan, el Boletín Estadístico y el Portafolio de Información Operativa de la CNBV, y el Buró de Entidades Financieras de Condusef. No contiene información confidencial de Bansí, de sus clientes ni de sus contrapartes.</p>
+</div>
+
+<h4 class="mini">Leyenda de clasificación</h4>
+<div class="legend">
+  <div class="lg" style="background:#085E54;color:#BAF4E9"><div class="t">Hecho</div><div class="d">Respaldado por fuente identificable y fechada.</div></div>
+  <div class="lg" style="background:#BAF4E9;color:#085E54"><div class="t">Señal</div><div class="d">Indicio de tendencia que por sí solo no demuestra una conclusión.</div></div>
+  <div class="lg" style="background:#C9E265;color:#073E38"><div class="t">Hipótesis</div><div class="d">Interpretación estratégica derivada de los hechos. Refutable.</div></div>
+  <div class="lg" style="background:#E9E3DC;color:#574F49"><div class="t">Implicación</div><div class="d">Qué podría significar esa hipótesis para el negocio.</div></div>
+</div>
+
+<h4 class="mini">Limitaciones declaradas</h4>
+<div class="cardgrid">
+  <div class="tabcard"><span class="tab tab-imp">Límite</span>
+    <h4>«No listado» no significa cero</h4>
+    <p>Las tablas de riesgo de crédito por región publican sólo las entidades principales y agrupan el resto en «Otros». Nuevo León no aparece en la tabla de 2023, lo que significa que ese año quedó por debajo del umbral de corte —dentro de un bloque de 782 millones—, no que la exposición fuera nula. La serie 2022–2025 es válida en su tendencia; los saltos año a año deben leerse con esa advertencia.</p>
+  </div>
+  <div class="tabcard"><span class="tab tab-imp">Límite</span>
+    <h4>El muro de vencimientos es una suma parcial</h4>
+    <p>Los 3,800 millones con vencimiento en 2026 salen de sumar únicamente las operaciones con fecha en ese año dentro de la lista de créditos gubernamentales publicada al cierre de 2025. No incluye cartera empresarial, cuyo perfil de amortización no se publica. La cifra real de vencimientos totales de 2026 es necesariamente mayor, no menor.</p>
+  </div>
+  <div class="tabcard"><span class="tab tab-imp">Límite</span>
+    <h4>Mezclamos cortes anuales y mensuales, y lo señalamos</h4>
+    <p>Las cifras de julio de 2026 son un corte mensual con flujos acumulados de siete meses; las de diciembre son cierres de ejercicio. No son comparables entre sí como años completos, y en ningún punto se construyó una tasa de crecimiento anual mezclando ambos tipos de corte.</p>
+  </div>
+  <div class="tabcard"><span class="tab tab-imp">Límite</span>
+    <h4>No sabemos nada del interior del proceso</h4>
+    <p>Tiempo de ciclo de originación, reparto de horas por actividad, ticket promedio, frecuencia de visita fuera de plaza, grado de integración de sistemas y costo de servir por entidad no son públicos y no se pueden inferir. Son, exactamente, el contenido del estudio de factibilidad. Que la evidencia pública llegue hasta la puerta de esas preguntas y no más allá no es una debilidad del análisis: es su conclusión.</p>
+  </div>
+</div>
+
+<h4 class="mini">Fuentes principales</h4>
+<ul class="srcs">
+  <li><b>Bansí, S.A. · estados financieros dictaminados</b> al 31 de diciembre de 2023 y 2022, y al 31 de diciembre de 2024 y 2023 — riesgo de crédito clasificado por región, integración de créditos a entidades gubernamentales, comisiones y tarifas, cuentas de orden, partes relacionadas y revelaciones de capitalización.</li>
+  <li><b>Bansí, S.A. · notas trimestrales</b> al 31 de diciembre de 2025 y al 30 de junio de 2026 — cartera por región 2025 y 2024, integración de créditos gubernamentales con tasa y vencimiento, actividad fiduciaria, comisiones e índice de capitalización.</li>
+  <li><b>CNBV · Boletín Estadístico de Banca Múltiple</b>, cortes mensuales de enero de 2023 a julio de 2026 — activo, cartera, captación, capital contable, margen financiero, gastos de administración y resultado neto de Bansí y de las instituciones comparadas.</li>
+  <li><b>CNBV · Portafolio de Información Operativa</b>, julio de 2026 — sucursales, personal contratado por la institución, cajeros y terminales punto de venta por institución.</li>
+  <li><b>Fitch Ratings</b> — acciones sobre Bansí del 6 de mayo de 2024 (alza a A+(mex)), 23 de mayo de 2025 y 14 de mayo de 2026.</li>
+  <li><b>S&amp;P Global Ratings</b> — análisis actualizado del 18 de marzo de 2026, mxA/Estable/mxA-1, con clasificación de componentes; carta de vigencia del 17 de diciembre de 2025.</li>
+  <li><b>Condusef · Buró de Entidades Financieras</b> — comportamiento general de bancos, enero–marzo de 2026.</li>
+  <li><b>HR Ratings de México</b> — Banca Múltiple en México, Análisis Sectorial, 9 de marzo de 2026.</li>
+  <li><b>Diario Oficial de la Federación</b> — reforma constitucional de jornada laboral, 3 de marzo de 2026; reforma a la Ley Federal del Trabajo, 1 de mayo de 2026.</li>
+</ul>
+
+<h4 class="mini">Sobre London Consulting Group</h4>
+<div class="body">
+<p>Firma de consultoría de transformación y mejora empresarial. La diferencia está en el alcance: no solamente identificamos qué debería cambiar; ayudamos a implementar los cambios y a hacer que las cosas sucedan. Metodología London, retorno garantizado 1:1 por contrato sobre la inversión del cliente y promedio histórico de 5:1. Los casos y cartas de recomendación están publicados en <a href="https://londoncg.mx/growth-stories">londoncg.mx/growth-stories</a>, única fuente que citamos para credenciales.</p>
+</div>
+`},
+
+{id:"cta",n:"→",t:"Conversación",d:"Cuarenta y cinco minutos para contrastar la hipótesis.",html:`
+<div class="ctawrap">
+  <div class="eyebrow-hub" style="margin-bottom:14px;color:rgba(242,238,235,.75)">Siguiente paso</div>
+  <h2>Cuarenta y cinco minutos para saber si esta hipótesis es correcta.</h2>
+  <p>Nos vimos en tus oficinas el 30 de mayo de 2025 y la conversación no llegó a un prediagnóstico. Volvemos dieciséis meses después con el trabajo hecho y con una tesis concreta: el 73% del crecimiento de tu cartera en cuatro años vino de un estado donde no tienes una sola oficina.</p>
+  <p>Lo que proponemos es contrastarla. Si ya tienes medido el costo de servir por peso colocado en Nuevo León contra el de Jalisco, y la diferencia está donde debe, la hipótesis se cae en los primeros diez minutos y te habremos ahorrado un proyecto. Si no lo está, la primera pregunta del estudio de factibilidad ya está escrita en la sección 12.</p>
+  <div class="ctabtns">
+    <a class="btn-p" href="https://wa.me/523318628273?text=Leonardo%2C%20soy%20Jorge%20Montes%20de%20Bans%C3%AD.%20Revis%C3%A9%20el%20an%C3%A1lisis%20que%20prepararon.%20Agendemos%20los%2045%20minutos.">Escribir por WhatsApp</a>
+    <a class="btn-s" href="mailto:leonardo.pimentel@londoncg.mx?subject=Bans%C3%AD%20%C2%B7%20An%C3%A1lisis%20London%20Consulting%20Group&amp;body=Leonardo%2C%20revis%C3%A9%20el%20an%C3%A1lisis.%20Propongo%20estas%20fechas%3A">Responder por correo</a>
+  </div>
+  <div class="signature">
+    <strong>Leonardo Pimentel</strong>
+    Director de Operaciones · London Consulting Group México<br>
+    <a href="tel:+523318628273">33 1862 8273</a> · <a href="mailto:leonardo.pimentel@londoncg.mx">leonardo.pimentel@londoncg.mx</a>
+  </div>
+</div>
+<div class="body">
+<p class="src" style="font-size:12.5px;color:#9A9086">Documento privado preparado exclusivamente para Bansí, S.A., Institución de Banca Múltiple, a partir de información pública y regulatoria. No está indexado y no se comparte con terceros.</p>
+</div>
+`}
+];
+
+/* ============ RENDER ============ */
+const idx=document.getElementById('idx'), views=document.getElementById('views');
+S.forEach((s,i)=>{
+  const b=document.createElement('button');
+  b.className='tile'+(s.id==='cta'?' cta-tile':'');
+  b.type='button';
+  b.innerHTML='<span class="tn num">'+s.n+'</span><span class="tt">'+s.t+'</span><span class="td">'+s.d+'</span>';
+  b.addEventListener('click',()=>go(s.id));
+  idx.appendChild(b);
+
+  const v=document.createElement('div');
+  v.className='view'; v.id='v-'+s.id;
+  v.innerHTML=
+   '<div class="topbar"><div class="topbar-in">'+
+     '<button class="btn" type="button" data-home>Índice</button>'+
+     '<div class="crumb"><span class="cn num">'+s.n+'</span><b>'+s.t+'</b></div>'+
+     '<button class="btn arrow" type="button" data-prev aria-label="Sección anterior">&#8592;</button>'+
+     '<button class="btn arrow" type="button" data-next aria-label="Sección siguiente">&#8594;</button>'+
+   '</div></div>'+
+   '<div class="wrap"><div class="sec">'+
+     '<div class="eyebrow">Sección '+s.n+'</div>'+
+     '<h2 tabindex="-1" id="h-'+s.id+'">'+s.t+'</h2>'+
+     '<p class="lede">'+s.d+'</p>'+
+     s.html+
+     '<div class="secfoot"><button class="btn" type="button" data-home>Volver al índice</button><span class="sp"></span>'+
+       (i<S.length-1?'<button class="btn" type="button" data-next>'+S[i+1].t+' &#8594;</button>':'')+
+     '</div>'+
+   '</div></div>';
+  views.appendChild(v);
+
+  v.querySelectorAll('[data-home]').forEach(e=>e.addEventListener('click',()=>go('')));
+  v.querySelectorAll('[data-prev]').forEach(e=>{
+    if(i===0){e.disabled=true;} else e.addEventListener('click',()=>go(S[i-1].id));
+  });
+  v.querySelectorAll('[data-next]').forEach(e=>{
+    if(i===S.length-1){e.disabled=true;} else e.addEventListener('click',()=>go(S[i+1].id));
+  });
+});
+
+/* ============ ROUTING ============ */
+/* pushState falla en contextos sin origen navegable (iframe srcdoc, file://).
+   Degradamos en cascada: pushState -> location.hash -> sólo render. */
+var CAN_PUSH=(function(){
+  try{ history.replaceState(history.state,'',location.href); return true; }
+  catch(e){ return false; }
+})();
+
+function show(id){
+  document.querySelectorAll('.view').forEach(v=>v.classList.remove('active'));
+  const el=id?document.getElementById('v-'+id):null;
+  const target=el||document.getElementById('hub');
+  target.classList.add('active');
+  window.scrollTo(0,0);
+  if(id&&el){const h=document.getElementById('h-'+id); if(h) h.focus({preventScroll:true});}
+  const s=id?S.find(x=>x.id===id):null;
+  document.title=(s?s.t+' · ':'')+'Bansí · Análisis preparado por London Consulting Group';
+}
+function go(id){
+  if(CAN_PUSH){
+    try{
+      history.pushState({id:id},'',id?('#'+id):(location.pathname+location.search));
+    }catch(e){
+      CAN_PUSH=false;
+      try{ location.hash=id; }catch(e2){}
+    }
+  }else{
+    try{ location.hash=id; }catch(e2){}
+  }
+  show(id);
+}
+window.addEventListener('popstate',()=>{show(location.hash.replace('#',''));});
+window.addEventListener('hashchange',()=>{show(location.hash.replace('#',''));});
+document.addEventListener('keydown',e=>{
+  if(e.key==='Escape'){go('');}
+});
+show(location.hash.replace('#',''));
+</script>
+</body>
+</html>
